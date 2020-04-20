@@ -37,24 +37,65 @@ body{
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
-
+/* ---------------------------------------- General Section Classes  --------------------------------------------------------------------*/
 .section{
     padding:0;
     margin:0;
 }
 
+.header{
+    margin:1rem 1rem;
+}
+
+/* ---------------------------------------- Video   --------------------------------------------------------------------*/
 .video-title{
     font-weight: 400;
     padding: 0;
-    margin:0;
+    margin: 1rem 1.5rem 1.5rem;
 }
 
 .content-video{
     padding:0;
     text-align: center;
 }
-
+/* ---------------------------------------- News items  --------------------------------------------------------------------*/
+.news button{
+    margin-left:1rem;
+    margin-bottom:2rem;
+}
+.news a{
+    text-decoration: none;
+    color:black;
+}
+.news h4{
+    padding:0.5rem 0.5rem;
+    display:inline;
+    font-weight: 400;
+}
+.news p{
+    display:inline-block;
+    text-emphasis: wrap;
+}
 .media {
-    width:250px;
-    height:150px;
+    width:15.63rem;
+    height:9.375rem;
+    display:inline-block;
+    margin-bottom: 1.5rem;    
+}
+/* ---------------------------------------- Responsive Design Elements --------------------------------------------------------------------*/
+@media screen and (min-width: 765px) {
+  
+}
+
+@media only screen and (min-width:769px) and (max-width: 1023px){
+    
+}
+
+@media only screen and (min-width: 1026px){
+    
+}
+/* ---------------------------------------- Interactivity classes --------------------------------------------------------------------*/
+.underline{
+    text-decoration: underline;
+    color:black;
 }
