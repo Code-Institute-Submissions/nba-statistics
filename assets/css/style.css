@@ -6,7 +6,6 @@ body{
     padding: 0;
     margin: 0 auto;
     font-family: "Roboto",sans-serif;
-    overflow: hidden;
     width: auto;
 }
 
@@ -53,4 +52,9 @@ body{
 .content-video{
     padding:0;
     text-align: center;
+}
+
+.media {
+    width:250px;
+    height:150px;
 }
