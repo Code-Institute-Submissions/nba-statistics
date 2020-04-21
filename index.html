@@ -19,14 +19,14 @@
 <body>
 
 	<header>
-		<div class="row no-gutters">
-			<a href="index.html" class="col-3 bg-blue mr-auto">
-				<div class="title"></div>
-			</a>
-			<div class="col-9">
+		<div class="row no-gutters menu">
 
-				<nav class="navbar navbar-expand-sm bg-blue navbar-top-fixed">
+			<div class="col">
 
+				<nav class="navbar fixed-top navbar-expand-sm bg-blue navbar-top-fixed">
+					<a href="index.html" class="col-3 bg-blue mr-auto">
+						<div class="title"></div>
+					</a>
 					<!-- Taken from whiskey drop assignment -->
 					<button class="navbar-toggler toggler-button ml-auto mr-auto navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="togglenavigation">
                             <span class="navbar-toggler-icon ">
@@ -63,95 +63,146 @@
 
 
 		</div>
+	</header>
+
+	<div class="row no-gutters">
+		<div class="col section" id="teams">
+			<h2 class="header">2019/2020 Team Standings</h2>
+		</div>
+
+	</div>
+
+
+	<div class="video-section">
+		<h2 class="header"> Video </h2>
 		<div class="row no-gutters">
-			<div class="col section" id="teams">
-				<h2 class="header">2019/2020 Team Standings</h2>
+			<div class="col-12 col-md-4 content-video">
+				<!-- Embedd links from Youtube edited with title added-->
+				<iframe width="90%" height="260" src="https://www.youtube.com/embed/tKmzQI1BX3A" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<h3 class="video-title">NBA Plays of the Week</h3>
 			</div>
-
-		</div>
-
-		<div class="video-section">
-			<h2 class="header"> Video </h2>
-			<div class="row no-gutters">
-				<div class="col-12 col-md-4 content-video">
-					<!-- Embedd links from Youtube edited with title added-->
-					<iframe width="90%" height="260" src="https://www.youtube.com/embed/tKmzQI1BX3A" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-					<h3 class="video-title">NBA Plays of the Week</h3>
-				</div>
-				<div class="col-12 col-md-4 content-video">
-					<iframe width="90%" height="260" src="https://www.youtube.com/embed/cgBkinjGarg" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-					<h3 class="video-title">Michael Jordan - The Best Ever?</h3>
-				</div>
-				<div class="col-12 col-md-4 content-video">
-					<iframe width="90%" height="260" src="https://www.youtube.com/embed/OTTWedyp37o" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-					<h4 class="video-title">Kobe Bryant's Top 100 Highlights</h4>
-				</div>
+			<div class="col-12 col-md-4 content-video">
+				<iframe width="90%" height="260" src="https://www.youtube.com/embed/cgBkinjGarg" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<h3 class="video-title">Michael Jordan - The Best Ever?</h3>
+			</div>
+			<div class="col-12 col-md-4 content-video">
+				<iframe width="90%" height="260" src="https://www.youtube.com/embed/OTTWedyp37o" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<h4 class="video-title">Kobe Bryant's Top 100 Highlights</h4>
 			</div>
 		</div>
+	</div>
 
-		<div class="news-section">
-			<h2 class="header"> News </h2>
-			<ul>
-				<li class="news">
-					<a href="https://www.nytimes.com/article/the-last-dance-jordan.html" target="_blank">
-						<h4>In ‘The Last Dance,’ Michael Jordan and the Bulls Still Dominate</h4>
-					</a>
-					<button>More</button>
-                    <div class="d-none">
-					<p>ESPN’s new 10-part documentary doesn’t ask Big Questions. But it does go big on a
-						team whose
-						personalities and feats warrant just this sort of excess.</p>
-					<img class="media" src="assets/images/bulls.jpg" alt="Michael Jordan being marked by 3 defenders"/>
-                    <div>
-				</li>
-				<li class="news">
-					<a
-						href="https://www.nytimes.com/2020/04/17/sports/basketball/michael-jordan-bulls-documentary.html" target="_blank">
-						<h4>The Last Dance? No Dynasty Can Compare to Michael Jordan’s Bulls</h4>
-					</a>
-					<button>More</button>
-                    <div class="d-none">
-					<p>The Chicago Bulls ruled the 1990s under an intense media spotlight. A generation
-						later, their greatness is still the basis for debate and, with the sports world on hold,
-						must-see TV.</p>
-					<img class="media" src="assets/images/michael.jpg" alt="Michael Jordan backing down in the post"/>
+	<div class="news-section">
+		<h2 class="header"> News </h2>
+		<ul>
+			<div class="row">
+				<div class="col-12 col-lg-6">
+					<li class="news">
+						<a href="https://www.nytimes.com/article/the-last-dance-jordan.html" target="_blank">
+							<h4>In ‘The Last Dance,’ Michael Jordan and the Bulls Still Dominate</h4>
+						</a>
+						<button>More</button>
+						<div class="d-none">
+							<p>ESPN’s new 10-part documentary doesn’t ask Big Questions. But it does go big on a
+								team whose
+								personalities and feats warrant just this sort of excess.</p>
+							<img class="media" src="assets/images/bulls.jpg" alt="Michael Jordan being marked by 3 defenders"/>
+							<div>
+					</li>
+				</div>
+				<div class="col-12 col-lg-6">
+					<li class="news">
+						<a href="https://www.nytimes.com/2020/04/17/sports/basketball/michael-jordan-bulls-documentary.html"
+							target="_blank">
+							<h4>The Last Dance? No Dynasty Can Compare to Michael Jordan’s Bulls</h4>
+						</a>
+						<button>More</button>
+						<div class="d-none">
+							<p>The Chicago Bulls ruled the 1990s under an intense media spotlight. A generation
+								later, their greatness is still the basis for debate and, with the sports world on hold,
+								must-see TV.</p>
+							<img class="media" src="assets/images/michael.jpg" alt="Michael Jordan backing down in the post"/>
                     </div>
-				</li>
-				<li class="news">
-					<a href="https://www.nytimes.com/2020/04/16/sports/coronavirus-sports-come-back.html" target="_blank">
-						<h4>When Will Sports Come Back? Here Is What Has to Happen First</h4>
-					</a>
-					<button>More</button>
-                    <div class="d-none">
-					<p>Sports leagues face large, but not insurmountable, obstacles to even getting games
-						back on television. Fans in the stands? Wait till next year.</p>
-					<img class="media" src="assets/images/chairs.jpg" alt="Empty Seats"/>
+					</li>
+				</div>
+				<div class="col-12 col-lg-6">
+					<li class="news">
+						<a href="https://www.nytimes.com/2020/04/16/sports/coronavirus-sports-come-back.html"
+							target="_blank">
+							<h4>When Will Sports Come Back? Here Is What Has to Happen First</h4>
+						</a>
+						<button>More</button>
+						<div class="d-none">
+							<p>Sports leagues face large, but not insurmountable, obstacles to even getting games
+								back on television. Fans in the stands? Wait till next year.</p>
+							<img class="media" src="assets/images/chairs.jpg" alt="Empty Seats"/>
                     </div>
-				</li>
-			</ul>
+					</li>
+				</div>
+				<div class="col-12 col-lg-6">
+					<li class="news">
+						<a href="https://www.nytimes.com/2020/04/15/sports/basketball/corona-nba-suspended.html"
+							target="_blank">
+							<h4>What We Know About the N.B.A., and What We Don’t</h4>
+						</a>
+						<button>More</button>
+						<div class="d-none">
+							<p>In this week’s newsletter, Marc Stein outlines six things to know about the suspended
+								N.B.A. season and discusses ways the league can honor David Stern.</p>
+							<img class="media" src="assets/images/physio.jpg" alt="Empty Seats"/>
+                    </div>
+					</li>
+				</div>
+			</div>
+		</ul>
+	</div>
+
+
+	<footer class="page-footer bg-blue">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<a class="icon" href="https://www.nba.com/?10" target="_blank">
+						<i class="fas fa-basketball-ball"></i> </i>
+					</a>
+				</div>
+				<div class="col-4">
+					<a class="icon" href="https://www.facebook.com/nba/" target="_blank">
+						<i class="fab fa-facebook-square">  </i>
+					</a>
+				</div>
+				<div class="col-4">
+					<a class="icon" href="https://www.linkedin.com/company/national-basketball-association/"
+						target="_blank">
+						<i class="fab fa-linkedin">  </i>
+					</a>
+				</div>
+
+
+			</div>
+
 
 		</div>
 
 
-		<footer>
-		</footer>
+	</footer>
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-		</script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-		</script>
-        <script type="text/javascript" src="assets/js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>
