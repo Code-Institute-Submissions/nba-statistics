@@ -1,5 +1,5 @@
 $(".news").children("button").click(function(){
-    $(this).siblings("div").toggleClass("d-none");
+    $(this).siblings("div").fadeToggle();
 })
 
 $(".news a").children("h4").mouseenter(function(){
