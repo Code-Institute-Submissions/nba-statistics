@@ -20,28 +20,42 @@ function getStandings(cb) {
 }
 
 
-function getTableHeaders(obj) {
-    var tableHeaders = [];
-    Object.keys(obj).forEach(function (key) {
-        tableHeaders.push(`<td> ${key} </td>`)
-    });
-    return `<tr> ${tableHeaders} </tr>`;
-}
-
 function writeToDocument(data) {
-    
+    var el = document.getElementById("teams");
+    el.innerHTML = "";
+    var standings = [];
 
     getStandings(function (standings) {
-        var el = document.getElementById("teams");
-        el.innerHtml = "";
-    
-        var standings = [];
         standings = data.api.standings;
-        
-        var tableHeaders = getTableHeaders(standings[0]);
-        
+        console.log(standings);
+        var content = "";
+        for (var i in standings) {
+            content += `<tr>
+            <td> ${standings[i]["teamId"]}</td>
+            <td> ${standings[i]["win"]}</td>
+            <td> ${standings[i]["loss"]}</td>
+            <td> ${standings[i]["winPercentage"]}</td>
+            <td> ${standings[i]["gamesBehind"]}</td>
+            <td> ${standings[i]["home"]["win"]} - ${standings[i]["home"]["loss"]}</td>
+            <td> ${standings[i]["away"]["win"]} - ${standings[i]["away"]["loss"]}</td>
+            <td> ${standings[i]["lastTenWin"]} - ${standings[i]["lastTenLoss"]}</td>
+            <td> ${standings[i]["home"]["win"]}</td>
+            </tr>`;
+        }
+        console.log(content);
+        el.innerHTML = `<table>
+        <tr>
+        <th> Team </th>
+        <th> Wins </th>
+        <th> Losses</th>
+        <th> Percentage </th>
+        <th> Games Behind </th>
+        <th> Home </th><th> Away </th>
+        <th> Last 10 Games</th>
+        </tr>
+        ${content} 
+        </table>`;
 
-        el.innerHTML = `<table>${tableHeaders}</table>`;
     });
 }
 
