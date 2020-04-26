@@ -29,22 +29,59 @@ function writeToDocument(data) {
         standings = data.api.standings;
         console.log(standings);
         var content = "";
-        for (var i in standings) {
-            content += `<tr>
-            <td> ${standings[i]["teamId"]}</td>
-            <td> ${standings[i]["win"]}</td>
-            <td> ${standings[i]["loss"]}</td>
-            <td> ${standings[i]["winPercentage"]}</td>
-            <td> ${standings[i]["gamesBehind"]}</td>
-            <td> ${standings[i]["home"]["win"]} - ${standings[i]["home"]["loss"]}</td>
-            <td> ${standings[i]["away"]["win"]} - ${standings[i]["away"]["loss"]}</td>
-            <td> ${standings[i]["lastTenWin"]} - ${standings[i]["lastTenLoss"]}</td>
-            <td> ${standings[i]["home"]["win"]}</td>
-            </tr>`;
+        var ranking = 1;
+        var teamsEast = [];
+        var teamsWest = [];
+        for (ranking = 1; ranking < 16;) {
+            for (i = 0; i < standings.length;) {
+                if (standings[i]["conference"]["name"] == "east" && standings[i]["conference"]["rank"] == ranking) {
+                    var teams =[];
+                    teams.push(`<td>${standings[i]["conference"]["rank"]}</td>`);
+                    teams.push(`<td>${standings[i]["teamId"]}</td>`);
+                    teams.push(`<td>${standings[i]["win"]}</td>`);
+                    teams.push(`<td>${standings[i]["loss"]}</td>`);
+                    teams.push(`<td>${standings[i]["winPercentage"]}</td>`);
+                    teams.push(`<td>${standings[i]["gamesBehind"]}</td>`);
+                    teams.push(`<td>${standings[i]["home"]["win"]} - ${standings[i]["home"]["loss"]}</td>`);
+                    teams.push(`<td>${standings[i]["away"]["win"]} - ${standings[i]["away"]["loss"]}</td>`);
+                    teams.push(`<td>${standings[i]["lastTenWin"]} - ${standings[i]["lastTenLoss"]}</td>`);
+                    teamsEast.push(`<tr> ${teams} </tr>`);
+                    i=0;
+                    ranking++;
+                }else{
+                    i++;
+                }
+
+            }
+        
         }
-        console.log(content);
+       for (ranking = 1; ranking < 16;) {
+            for (i = 0; i < standings.length;) {
+                if (standings[i]["conference"]["name"] == "west" && standings[i]["conference"]["rank"] == ranking) {
+                    var teams =[];
+                    teams.push(`<td>${standings[i]["conference"]["rank"]}</td>`);
+                    teams.push(`<td>${standings[i]["teamId"]}</td>`);
+                    teams.push(`<td>${standings[i]["win"]}</td>`);
+                    teams.push(`<td>${standings[i]["loss"]}</td>`);
+                    teams.push(`<td>${standings[i]["winPercentage"]}</td>`);
+                    teams.push(`<td>${standings[i]["gamesBehind"]}</td>`);
+                    teams.push(`<td>${standings[i]["home"]["win"]} - ${standings[i]["home"]["loss"]}</td>`);
+                    teams.push(`<td>${standings[i]["away"]["win"]} - ${standings[i]["away"]["loss"]}</td>`);
+                    teams.push(`<td>${standings[i]["lastTenWin"]} - ${standings[i]["lastTenLoss"]}</td>`);
+                    teamsWest.push(`<tr>${teams}</tr>`);
+                    i=0;
+                    ranking++;
+                }else{
+                    i++;
+                }
+
+            }
+        
+        }
         el.innerHTML = `<table>
+        <tr> <th>Eastern Conference</th> </tr>
         <tr>
+        <th> Rank </th>
         <th> Team </th>
         <th> Wins </th>
         <th> Losses</th>
@@ -53,7 +90,9 @@ function writeToDocument(data) {
         <th> Home </th><th> Away </th>
         <th> Last 10 Games</th>
         </tr>
-        ${content} 
+        ${teamsEast}
+        <tr> <th> Western Conference </th> </tr>
+        ${teamsWest}
         </table>`;
 
     });
