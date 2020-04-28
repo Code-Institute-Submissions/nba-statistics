@@ -1,0 +1,212 @@
+[
+    {
+        "teamId": 1,
+        "abbreviation": "ATL",
+        "teamName": "Atlanta Hawks",
+        "simpleName": "Hawks",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
+    },
+    {
+        "teamId": 2,
+        "abbreviation": "BOS",
+        "teamName": "Boston Celtics",
+        "simpleName": "Celtics",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
+    },
+    {
+        "teamId": 4,
+        "abbreviation": "BKN",
+        "teamName": "Brooklyn Nets",
+        "simpleName": "Nets",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png"
+    },
+    {
+        "teamId": 5,
+        "abbreviation": "CHA",
+        "teamName": "Charlotte Hornets",
+        "simpleName": "Hornets",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
+    },
+    {
+        "teamId": 6,
+        "abbreviation": "CHI",
+        "teamName": "Chicago Bulls",
+        "simpleName": "Bulls",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png"
+    },
+    {
+        "teamId": 7,
+        "abbreviation": "CLE",
+        "teamName": "Cleveland Cavaliers",
+        "simpleName": "Cavaliers",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+    },
+    {
+        "teamId": 8,
+        "abbreviation": "DAL",
+        "teamName": "Dallas Mavericks",
+        "simpleName": "Mavericks",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+    },
+    {
+        "teamId": 9,
+        "abbreviation": "DEN",
+        "teamName": "Denver Nuggets",
+        "simpleName": "Nuggets",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+    },
+    {
+        "teamId": 10,
+        "abbreviation": "DET",
+        "teamName": "Detroit Pistons",
+        "simpleName": "Pistons",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Detroit_Pistons_logo.svg/1200px-Detroit_Pistons_logo.svg.png"
+    },
+    {
+        "teamId": 11,
+        "abbreviation": "GSW",
+        "teamName": "Golden State Warriors",
+        "simpleName": "Warriors",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+    },
+    {
+        "teamId": 14,
+        "abbreviation": "HOU",
+        "teamName": "Houston Rockets",
+        "simpleName": "Rockets",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+    },
+    {
+        "teamId": 15,
+        "abbreviation": "IND",
+        "teamName": "Indiana Pacers",
+        "simpleName": "Pacers",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png"
+    },
+    {
+        "teamId": 16,
+        "abbreviation": "LAC",
+        "teamName": "Los Angeles Clippers",
+        "simpleName": "Clippers",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+    },
+    {
+        "teamId": 17,
+        "abbreviation": "LAL",
+        "teamName": "Los Angeles Lakers",
+        "simpleName": "Lakers",
+        "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+    },
+    {
+        "teamId": 19,
+        "abbreviation": "MEM",
+        "teamName": "Memphis Grizzlies",
+        "simpleName": "Grizzlies",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
+    },
+    {
+        "teamId": 20,
+        "abbreviation": "MIA",
+        "teamName": "Miami Heat",
+        "simpleName": "Heat",
+        "logo":  "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+    },
+    {
+        "teamId": 21,
+        "abbreviation": "MIL",
+        "teamName": "Milwaukee Bucks",
+        "simpleName": "Bucks",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
+    },
+    {
+        "teamId": 22,
+        "abbreviation": "MIN",
+        "teamName": "Minnesota Timberwolves",
+        "simpleName": "Timberwolves",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+    },
+    {
+        "teamId": 23,
+        "abbreviation": "NOP",
+        "teamName": "New Orleans Pelicans",
+        "simpleName": "Pelicans",
+        "logo":"https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
+    },
+    {
+        "teamId": 24,
+        "abbreviation": "NYK",
+        "teamName": "New York Knicks",
+        "simpleName": "Knicks",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/d/dc/NY_Knicks_Logo_2011.png"
+    },
+    {
+        "teamId": 25,
+        "abbreviation": "OKC",
+        "teamName": "Oklahoma City Thunder",
+        "simpleName": "Thunder",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+    },
+    {
+        "teamId": 26,
+        "abbreviation": "ORL",
+        "teamName": "Orlando Magic",
+        "simpleName": "Magic",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png"
+    },
+    {
+        "teamId": 27,
+        "abbreviation": "PHI",
+        "teamName": "Philadelphia 76ers",
+        "simpleName": "76ers",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
+    },
+    {
+        "teamId": 28,
+        "abbreviation": "PHX",
+        "teamName": "Phoenix Suns",
+        "simpleName": "Suns",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+    },
+    {
+        "teamId": 29,
+        "abbreviation": "POR",
+        "teamName": "Portland Trail Blazers",
+        "simpleName": "Trail Blazers",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
+    },
+    {
+        "teamId": 30,
+        "abbreviation": "SAC",
+        "teamName": "Sacramento Kings",
+        "simpleName": "Kings",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
+    },
+    {
+        "teamId": 31,
+        "abbreviation": "SAS",
+        "teamName": "San Antonio Spurs",
+        "simpleName": "Spurs",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png"
+    },
+    {
+        "teamId": 38,
+        "abbreviation": "TOR",
+        "teamName": "Toronto Raptors",
+        "simpleName": "Raptors",
+        "logo":"https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png"
+    },
+    {
+        "teamId": 40,
+        "abbreviation": "UTA",
+        "teamName": "Utah Jazz",
+        "simpleName": "Jazz",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+    },
+    {
+        "teamId": 41,
+        "abbreviation": "WAS",
+        "teamName": "Washington Wizards",
+        "simpleName": "Wizards",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+    }
+]
