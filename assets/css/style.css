@@ -59,16 +59,20 @@ body{
 /* ---------------------------------------- Conference Standings --------------------------------------------------------------------*/
 
 .conference-standings{
-    width: 90%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.conference-standings th{
+    color: white;
+    background-color: rgb(14, 0, 197);
 }
 .logo{
     display:contain;
     background-repeat: no-repeat;
+    width:30px;
 }
-.team-logo{
-    width:50px;
-    height:50px;
-}
+
 /* ---------------------------------------- Video   --------------------------------------------------------------------*/
 .video-title{
     font-weight: 400;

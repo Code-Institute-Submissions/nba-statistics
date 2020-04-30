@@ -115,7 +115,9 @@ function writeToDocument(teams){
         tableContentEast.push(
             `<tr>
             <td>${teamsEast[i]["rank"]}</td>
-            <td>${teamsEast[i]["fullName"]} <span> <img class="logo" src="${teamsEast[i]["logo"]}" alt="${teamsEast[i]["shortName"]}"/></span></td>
+            <td class="d-none d-sm-table-cell">${teamsEast[i]["fullName"]}</td>
+            <td class="d-none d-sm-table-cell"> <img class="logo" src="${teamsEast[i]["logo"]}" alt="${teamsEast[i]["shortName"]}"/></td>
+            <td class="d-table-cell d-sm-none">${teamsEast[i]["shortName"]}</td>
             <td>${teamsEast[i]["wins"]}</td>
             <td>${teamsEast[i]["loss"]}</td>
             <td>${teamsEast[i]["winPercentage"]}</td>
@@ -128,7 +130,9 @@ function writeToDocument(teams){
         tableContentWest.push(
             `<tr>
             <td>${teamsWest[i]["rank"]}</td>
-            <td>${teamsWest[i]["fullName"]} <span><img class="logo" src="${teamsWest[i]["logo"]}" alt="${teamsWest[i]["shortName"]}"/></span></td>
+            <td class="d-sm-none d-md-table-cell">${teamsWest[i]["fullName"]} </td>
+            <td class="d-sm-none d-md-table-cell"><img class="logo" src="${teamsWest[i]["logo"]}" alt="${teamsWest[i]["shortName"]}"/></td>
+            <td class="d-table-cell d-sm-none">${teamsWest[i]["shortName"]}</td>
             <td>${teamsWest[i]["wins"]}</td>
             <td>${teamsWest[i]["loss"]}</td>
             <td>${teamsWest[i]["winPercentage"]}</td>
@@ -138,10 +142,11 @@ function writeToDocument(teams){
         )
     }
     
-    el.innerHTML= `<table class="conference-standings">
-    <tr><th> Eastern Conference </th></tr>
+    el.innerHTML= `<table class="table-bordered conference-standings">
+    <tr><th colspan="8"> Eastern Conference </th></tr>
     <tr><th> Rank </th>
-    <th> Team </th>
+    <th class="d-table-cell d-sm-none"> Team </th>
+    <th class="d-none d-sm-table-cell" colspan="2"> Team </th>
     <th> Wins </th>
     <th> Losses </th>
     <th> Win Percentage </th>
@@ -149,7 +154,16 @@ function writeToDocument(teams){
     <th> Away W-L </th>
     </tr>
     ${tableContentEast}
-    <tr><th> Western Conference</th></tr>
+    <tr><th colspan="8"> Western Conference</th></tr>
+    <tr><th> Rank </th>
+    <th class="d-sm-table-cell d-md-none"> Team </th>
+    <th class="d-sm-none d-md-table-cell" colspan="2"> Team </th>
+    <th> Wins </th>
+    <th> Losses </th>
+    <th> Win Percentage </th>
+    <th> Home W-L </th>
+    <th> Away W-L </th>
+    </tr>
     ${tableContentWest}
     </table>`.replace(/,/g, "");
 
