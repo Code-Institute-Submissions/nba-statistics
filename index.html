@@ -43,9 +43,9 @@
 								</a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="index.html">Home</a>
-									<a class="dropdown-item" href="">Team Standings</a>
-									<a class="dropdown-item" href="">News</a>
-									<a class="dropdown-item" href="">Video</a>
+									<button class="dropdown-item"  onclick="scrollToStandings()">Team Standings</button>
+									<button class="dropdown-item"  onclick="scrollToNews()">News</button>
+									<button class="dropdown-item"  onclick="scrollToVideo()">Video</button>
 								</div>
 							</li>
 							<li class="nav-item">
@@ -66,9 +66,9 @@
 		</div>
 	</header>
 
-	<div class="row no-gutters">
+	<div class="row no-gutters team-standings">
 		<div class="col-12">
-			<h2 class="header">2019/2020 Team Standings</h2>
+			<h2 class="header" id="standings-header">2019/2020 Team Standings</h2>
 		</div>
 		<div class="col section" id="teams">
         <h2 id="error" class="d-none" > Data not currently available - Please try again later. </h2>
@@ -78,7 +78,7 @@
 
 
 	<div class="video-section">
-		<h2 class="header"> Video </h2>
+		<h2 class="header" id="video-header"> Video </h2>
 		<div class="row no-gutters">
 			<div class="col-12 col-md-4 content-video">
 				<!-- Embedd links from Youtube edited with title added-->
@@ -103,7 +103,7 @@
 	</div>
 
 	<div class="news-section">
-		<h2 class="header"> News </h2>
+		<h2 class="header" id="news-header"> News </h2>
 		<ul>
 			<div class="row">
 				<div class="col-12 col-lg-6">
@@ -217,7 +217,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 	</script>
-    <script type="text/javascript" src="assets/js/teamid.json"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 

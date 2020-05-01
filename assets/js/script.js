@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
 // link to standings data (GET) -- https://api-nba-v1.p.rapidapi.com/standings/%7Bleague%7D/%7Bseasonyear%7D/conference/%7Bconference%7D
-function getData(ajaxurl) {
+function getData() {
     $.ajax({
         url: "https://api-nba-v1.p.rapidapi.com/standings/standard/2019/",
         method: 'GET',
@@ -94,7 +94,6 @@ function teamsToData(team_data, team_names) {
     writeToDocument(teams);
 }
 function writeToDocument(teams){
-    console.log(teams);
     var el = document.getElementById("teams");
     el.innerHTML = "";
     ranking = 1
@@ -121,8 +120,8 @@ function writeToDocument(teams){
             <td>${teamsEast[i]["wins"]}</td>
             <td>${teamsEast[i]["loss"]}</td>
             <td>${teamsEast[i]["winPercentage"]}</td>
-            <td>${teamsEast[i]["homeWin"]} - ${teamsEast[i]["homeLoss"]}</td>
-            <td>${teamsEast[i]["awayWin"]} - ${teamsEast[i]["awayLoss"]}</td>
+            <td class="d-none d-sm-table-cell">${teamsEast[i]["homeWin"]} - ${teamsEast[i]["homeLoss"]}</td>
+            <td class="d-none d-sm-table-cell">${teamsEast[i]["awayWin"]} - ${teamsEast[i]["awayLoss"]}</td>
              </tr>`
         )
     }
@@ -130,14 +129,14 @@ function writeToDocument(teams){
         tableContentWest.push(
             `<tr>
             <td>${teamsWest[i]["rank"]}</td>
-            <td class="d-sm-none d-md-table-cell">${teamsWest[i]["fullName"]} </td>
-            <td class="d-sm-none d-md-table-cell"><img class="logo" src="${teamsWest[i]["logo"]}" alt="${teamsWest[i]["shortName"]}"/></td>
+            <td class="d-none d-sm-table-cell">${teamsWest[i]["fullName"]} </td>
+            <td class="d-none d-sm-table-cell"><img class="logo" src="${teamsWest[i]["logo"]}" alt="${teamsWest[i]["shortName"]}"/></td>
             <td class="d-table-cell d-sm-none">${teamsWest[i]["shortName"]}</td>
             <td>${teamsWest[i]["wins"]}</td>
             <td>${teamsWest[i]["loss"]}</td>
             <td>${teamsWest[i]["winPercentage"]}</td>
-            <td>${teamsWest[i]["homeWin"]} - ${teamsEast[i]["homeLoss"]}</td>
-            <td>${teamsWest[i]["awayWin"]} - ${teamsEast[i]["awayLoss"]}</td>
+            <td class="d-none d-sm-table-cell">${teamsWest[i]["homeWin"]} - ${teamsEast[i]["homeLoss"]}</td>
+            <td class="d-none d-sm-table-cell">${teamsWest[i]["awayWin"]} - ${teamsEast[i]["awayLoss"]}</td>
              </tr>`
         )
     }
@@ -150,29 +149,45 @@ function writeToDocument(teams){
     <th> Wins </th>
     <th> Losses </th>
     <th> Win Percentage </th>
-    <th> Home W-L </th>
-    <th> Away W-L </th>
+    <th class="d-none d-sm-table-cell"> Home W-L </th>
+    <th class="d-none d-sm-table-cell"> Away W-L </th>
     </tr>
     ${tableContentEast}
     <tr><th colspan="8"> Western Conference</th></tr>
     <tr><th> Rank </th>
-    <th class="d-sm-table-cell d-md-none"> Team </th>
-    <th class="d-sm-none d-md-table-cell" colspan="2"> Team </th>
+    <th class="d-table-cell d-sm-none"> Team </th>
+    <th class="d-none d-sm-table-cell" colspan="2"> Team </th>
     <th> Wins </th>
     <th> Losses </th>
     <th> Win Percentage </th>
-    <th> Home W-L </th>
-    <th> Away W-L </th>
+    <th class="d-none d-sm-table-cell"> Home W-L </th>
+    <th class="d-none d-sm-table-cell"> Away W-L </th>
     </tr>
     ${tableContentWest}
     </table>`.replace(/,/g, "");
 
 }
-function fetchPlayerInfo(event) {
-    var playerName = $("#player-username").val();
 
-    $("#nba-user-data").html(
-        `<div id="loader">
-            <img src="assets/css/loading.gif" alt="loading..." />
-        </div>`);
+$(".news").children("button").click(function(){
+    $(this).siblings("div").toggleClass("d-none");
+});
+
+$(".news a").children("h4").mouseenter(function(){
+    $(this).addClass("underline");
+});
+$(".news a").children("h4").mouseleave(function(){
+    $(this).removeClass("underline");
+});
+
+function scrollToStandings(){
+    var elem = document.getElementById("standings-header");
+    elem.scrollIntoView({behavior: "smooth", block: "start", inline:"end"});
+}
+function scrollToVideo(){
+    var elem = document.getElementById("video-header");
+    elem.scrollIntoView({behavior: "smooth", block: "start", inline:"end"});
+}
+function scrollToNews(){
+    var elem = document.getElementById("news-header");
+    elem.scrollIntoView({behavior: "smooth", block: "start", inline:"end"});
 }

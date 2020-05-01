@@ -8,6 +8,9 @@ body{
     font-family: "Roboto",sans-serif;
     width: auto;
 }
+.row div{
+    padding:0;
+}
 
 /* ---------------------------------------- Header, Footer and logo items  --------------------------------------------------------------------*/
 
@@ -44,7 +47,7 @@ body{
     color:white;
     text-decoration: none;
 }
-.page-footer{
+footer{
     text-align: center;
 }
 /* ---------------------------------------- General Section Classes  --------------------------------------------------------------------*/
@@ -87,6 +90,9 @@ body{
 /* ---------------------------------------- News items  --------------------------------------------------------------------*/
 .news button{
     margin:0 0 1.5rem 2rem;
+}
+.news div{
+    margin: 1rem 0;
 }
 .news a{
     text-decoration: none;
