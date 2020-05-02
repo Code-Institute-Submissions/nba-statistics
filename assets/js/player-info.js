@@ -23,7 +23,7 @@ function getPlayers(playerName) {
         },
         contentType: 'application/json; charset=utf-8',
         success: function (results) {
-            var all_players = {};
+            var all_players = [];
             for (i = 0; i < results.api.players.length; i++) {
                 all_players[results.api.players[i]["playerId"]] = {
                     playerId: results.api.players[i]["playerId"],
@@ -31,6 +31,7 @@ function getPlayers(playerName) {
                 };
             }
             playerRequest(all_players, playerName);
+
         },
         error: function (error) {
 
@@ -40,16 +41,15 @@ function getPlayers(playerName) {
 
 function playerRequest(all_players, playerName) {
 
-    for (i in all_players) {
-        if (all_players[i]["fullName"] == playerName) {
-            playerId = all_players[i]["playerId"];
-            returnPlayerStats(playerId);
-            break;
-        } else {
-            setTimeout(function(){ $("#nba-user-data").html("<p> Player not found - please enter another player or check the spelling </p>");},8000)
-           
-        }
-    }
+    let p = all_players.filter(player => player.fullName == playerName);
+    console.log(p);
+    if (p.length == 0) {
+         $("#nba-user-data").html("<p> Player not found - please enter another player or check the spelling </p>");
+    }else{
+        var playerId = p[0]["playerId"];
+        returnPlayerStats(playerId, playerName);
+    };
+
 
 }
 
@@ -86,7 +86,7 @@ function returnPlayerStats(playerId, playerName) {
             var fgp = 0;
             var tpp = 0;
             var ftp = 0;
-            var steals= 0;
+            var steals = 0;
             var blocks = 0;
             var turnovers = 0;
             var gamesPlayed = 0;
@@ -103,26 +103,26 @@ function returnPlayerStats(playerId, playerName) {
                 turnovers += playerStats[i]["turnovers"];
             }
             playerAvg[0] = {
-                points: (points/gamesPlayed).toFixed(2),
-                rebounds: (rebounds/gamesPlayed).toFixed(2),
-                assists: (assists/gamesPlayed).toFixed(2),
-                fgp: (fgp/gamesPlayed).toFixed(2),
-                tpp: (tpp/gamesPlayed).toFixed(2),
-                ftp: (ftp/gamesPlayed).toFixed(2),
-                steals: (steals/gamesPlayed).toFixed(2),
-                blocks: (blocks/gamesPlayed).toFixed(2),
-                turnovers: (turnovers/gamesPlayed).toFixed(2)
+                points: (points / gamesPlayed).toFixed(2),
+                rebounds: (rebounds / gamesPlayed).toFixed(2),
+                assists: (assists / gamesPlayed).toFixed(2),
+                fgp: (fgp / gamesPlayed).toFixed(2),
+                tpp: (tpp / gamesPlayed).toFixed(2),
+                ftp: (ftp / gamesPlayed).toFixed(2),
+                steals: (steals / gamesPlayed).toFixed(2),
+                blocks: (blocks / gamesPlayed).toFixed(2),
+                turnovers: (turnovers / gamesPlayed).toFixed(2)
             }
             console.log(playerAvg);
             writeToDocument(playerAvg, playerName);
-        
+
         },
         error: function (error) {
 
         }
     });
 }
-function writeToDocument(playerAvg, playerName){
+function writeToDocument(playerAvg, playerName) {
     var el = document.getElementById("nba-user-data");
 
     el.innerHTML = `<h2> Per Game Averages </h2>
