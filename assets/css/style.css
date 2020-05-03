@@ -153,7 +153,9 @@ list-style-type: none;
 }
 
 @media only screen and (min-width:768px) and (max-width: 1025px){
-    
+    .player-image-container{ 
+        margin-left:auto;
+    }
     .media{
         position:static;
         margin-left: 10%;
@@ -179,25 +181,26 @@ list-style-type: none;
 .data{
     margin: 0 auto;
 }
-#nba-user-data{
-    width: 80%;
-    text-align: center;
+.player-entry{
+    margin: 1rem auto;
 }
+
 .player-data{
-width: 80%;
 text-align: center;
 margin: 0 auto;
+width:100%;
 }
-#player-image.container{
-    margin: 0 auto;
-}
-#loader{
-margin:0 auto;
-text-align: center;
-}
-.player-section{
-    margin: 0 auto;
+#nba-user-data{
     text-align: center;
+}
+.player-header{
+    padding: 1rem 0;
+}
+
+.headshot{
+    display: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 2rem;
 }
 /* ---------------------------------------- Interactivity classes --------------------------------------------------------------------*/
 .underline{

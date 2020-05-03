@@ -10,6 +10,9 @@ function fetchPlayerInfo(event) {
         `<div id="loader">
             <img src="assets/images/loading.gif" alt="loading..." />
         </div>`);
+    $("#nba-user-data").html("");
+    $("#player-image-container").html("");
+
 }
 
 function getPlayers(playerName) {
@@ -63,7 +66,7 @@ function getPlayerImage(firstName, lastName) {
 
     imageURL = "https://nba-players.herokuapp.com/players/" + lastName + "/" + firstName;
     el = document.getElementById("player-image-container");
-    el.innerHTML = `<img src="${imageURL}" alt="${firstName} ${lastName}"/>`;
+    el.innerHTML = `<img class="headshot" src="${imageURL}" alt="${firstName} ${lastName}"/>`;
 
 }
 function returnPlayerStats(playerId, playerName) {
