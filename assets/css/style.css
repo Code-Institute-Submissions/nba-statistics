@@ -73,7 +73,7 @@ footer{
 .logo{
     display:contain;
     background-repeat: no-repeat;
-    width:30px;
+    height: 50px;
 }
 
 /* ---------------------------------------- Video   --------------------------------------------------------------------*/
@@ -179,8 +179,31 @@ list-style-type: none;
 .data{
     margin: 0 auto;
 }
+#nba-user-data{
+    width: 80%;
+    text-align: center;
+}
+.player-data{
+width: 80%;
+text-align: center;
+margin: 0 auto;
+}
+#player-image.container{
+    margin: 0 auto;
+}
+#loader{
+margin:0 auto;
+text-align: center;
+}
+.player-section{
+    margin: 0 auto;
+    text-align: center;
+}
 /* ---------------------------------------- Interactivity classes --------------------------------------------------------------------*/
 .underline{
     text-decoration: underline;
     color:black;
+}
+.uppercase{
+    text-transform: uppercase;
 }

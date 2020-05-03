@@ -64,7 +64,7 @@
 
 		</div>
 	</header>
-	<section class="container-fluid">
+	<section class="container-fluid player-section">
 		<div class="row">
 			<div class="col-12">
 				<h3 class="contact-header text-center">Search for you favourite NBA player</h3>
@@ -72,11 +72,15 @@
 
 			<div class="center-form">
 				<input type="text" id="player-name" value="Type player here" />
-                <button onclick="fetchPlayerInfo()"> Search </button>
+				<button onclick="fetchPlayerInfo()"> Search </button>
 			</div>
-            
-            <div class="col-12 data" id="nba-user-data"></div>
 		</div>
+		<div class="row">
+            <div class="col-12" id = "loader"></div>
+			<div class="col-4" id="player-image-container"></div>
+			<div class="col-4 data" id="nba-user-data"></div>
+		</div>
+
 
 	</section>
 	<footer class="page-footer fixed-bottom bg-blue">
@@ -117,7 +121,7 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 	</script>
 
-    <script type="text/javascript" src="assets/js/player-info.js"></script>
+	<script type="text/javascript" src="assets/js/player-info.js"></script>
 </body>
 
 </html>

@@ -89,28 +89,31 @@ function teamsToData(team_data, team_names) {
             logo: team_names[i]["logo"],
             shortName: team_names[i]["shortName"]
         }
-        
+
     }
     writeToDocument(teams);
 }
-function writeToDocument(teams){
+function writeToDocument(teams) {
     var el = document.getElementById("teams");
     el.innerHTML = "";
     ranking = 1
-    teamsEast={};
-    teamsWest={};
-    tableContentWest=[];
-    tableContentEast=[];
-    for (ranking = 1; ranking< 16; ranking++){
-        for (var i in teams){
-            if (teams[i]["rank"] == ranking && teams[i]["conference"] == "east"){
+    teamsEast = {};
+    teamsWest = {};
+    tableContentWest = [];
+    tableContentEast = [];
+    for (ranking = 1; ranking < 16; ranking++) {
+        for (var i in teams) {
+            if (teams[i]["rank"] == ranking && teams[i]["conference"] == "east") {
                 teamsEast[ranking] = teams[i];
-            }else if (teams[i]["rank"] == ranking && teams[i]["conference"] == "west"){
+            } else if (teams[i]["rank"] == ranking && teams[i]["conference"] == "west") {
                 teamsWest[ranking] = teams[i];
             }
         }
     }
-    for (var i in teamsEast){
+    // Logo for Detroit not loading as 404 - link in manually
+    teamsEast[13]["logo"] = "https://sportslogohistory.com/wp-content/uploads/2017/05/detroit_pistons_2017-pres.png"
+
+    for (var i in teamsEast) {
         tableContentEast.push(
             `<tr>
             <td>${teamsEast[i]["rank"]}</td>
@@ -125,7 +128,7 @@ function writeToDocument(teams){
              </tr>`
         )
     }
-    for (var i in teamsWest){
+    for (var i in teamsWest) {
         tableContentWest.push(
             `<tr>
             <td>${teamsWest[i]["rank"]}</td>
@@ -141,7 +144,8 @@ function writeToDocument(teams){
         )
     }
     
-    el.innerHTML= `<table class="table-bordered conference-standings">
+    console.log(teamsEast);
+    el.innerHTML = `<table class="table-bordered conference-standings">
     <tr><th colspan="8"> Eastern Conference </th></tr>
     <tr><th> Rank </th>
     <th class="d-table-cell d-sm-none"> Team </th>
@@ -168,26 +172,26 @@ function writeToDocument(teams){
 
 }
 
-$(".news").children("button").click(function(){
+$(".news").children("button").click(function () {
     $(this).siblings("div").toggleClass("d-none");
 });
 
-$(".news a").children("h4").mouseenter(function(){
+$(".news a").children("h4").mouseenter(function () {
     $(this).addClass("underline");
 });
-$(".news a").children("h4").mouseleave(function(){
+$(".news a").children("h4").mouseleave(function () {
     $(this).removeClass("underline");
 });
 
-function scrollToStandings(){
+function scrollToStandings() {
     var elem = document.getElementById("standings-header");
-    elem.scrollIntoView({behavior: "smooth", block: "start", inline:"end"});
+    elem.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
 }
-function scrollToVideo(){
+function scrollToVideo() {
     var elem = document.getElementById("video-header");
-    elem.scrollIntoView({behavior: "smooth", block: "start", inline:"end"});
+    elem.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
 }
-function scrollToNews(){
+function scrollToNews() {
     var elem = document.getElementById("news-header");
-    elem.scrollIntoView({behavior: "smooth", block: "start", inline:"end"});
+    elem.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
 }

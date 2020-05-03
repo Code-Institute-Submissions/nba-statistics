@@ -2,13 +2,13 @@
 
 
 function fetchPlayerInfo(event) {
-    var playerName = $("#player-name").val();
+    var playerName = $("#player-name").val().toLowerCase();
 
     getPlayers(playerName);
 
-    $("#nba-user-data").html(
+    $("#loader").html(
         `<div id="loader">
-            <img src="./images/loading.gif" alt="loading..." />
+            <img src="assets/images/loading.gif" alt="loading..." />
         </div>`);
 }
 
@@ -24,10 +24,13 @@ function getPlayers(playerName) {
         contentType: 'application/json; charset=utf-8',
         success: function (results) {
             var all_players = [];
+            console.log(results);
             for (i = 0; i < results.api.players.length; i++) {
                 all_players[results.api.players[i]["playerId"]] = {
                     playerId: results.api.players[i]["playerId"],
-                    fullName: results.api.players[i]["firstName"] + " " + results.api.players[i]["lastName"],
+                    fullName: results.api.players[i]["firstName"].toLowerCase() + " " + results.api.players[i]["lastName"].toLowerCase(),
+                    firstName: results.api.players[i]["firstName"].toLowerCase(),
+                    lastName: results.api.players[i]["lastName"].toLowerCase()
                 };
             }
             playerRequest(all_players, playerName);
@@ -44,15 +47,25 @@ function playerRequest(all_players, playerName) {
     let p = all_players.filter(player => player.fullName == playerName);
     console.log(p);
     if (p.length == 0) {
-         $("#nba-user-data").html("<p> Player not found - please enter another player or check the spelling </p>");
-    }else{
+        $("#loader").html("<p> Player not found - please enter another player or check the spelling </p>");
+    } else {
         var playerId = p[0]["playerId"];
         returnPlayerStats(playerId, playerName);
+        var firstName = "";
+        firstName = p[0]["firstName"];
+        var lastName = "";
+        lastName = p[0]["lastName"];
+        getPlayerImage(firstName, lastName);
     };
-
-
 }
 
+function getPlayerImage(firstName, lastName) {
+
+    imageURL = "https://nba-players.herokuapp.com/players/" + lastName + "/" + firstName;
+    el = document.getElementById("player-image-container");
+    el.innerHTML = `<img src="${imageURL}" alt="${firstName} ${lastName}"/>`;
+
+}
 function returnPlayerStats(playerId, playerName) {
 
     $.ajax({
@@ -113,7 +126,6 @@ function returnPlayerStats(playerId, playerName) {
                 blocks: (blocks / gamesPlayed).toFixed(2),
                 turnovers: (turnovers / gamesPlayed).toFixed(2)
             }
-            console.log(playerAvg);
             writeToDocument(playerAvg, playerName);
 
         },
@@ -123,34 +135,45 @@ function returnPlayerStats(playerId, playerName) {
     });
 }
 function writeToDocument(playerAvg, playerName) {
+    var lo = document.getElementById("loader");
     var el = document.getElementById("nba-user-data");
-
-    el.innerHTML = `<h2> Per Game Averages </h2>
-    <table>
+    lo.innerHTML = "";
+    el.innerHTML = `<h4 class="uppercase">Averages Per Game For ${$("#player-name").val()} </h4>
+    <table class="player-data table-bordered">
     <tr>
-    <th> Player Name </th>
     <th> Points </th>
-    <th> Rebounds </th>
-    <th> Assists </th>
-    <th> Field Goal Percentage </th>
-    <th> Three Point Percentage </th>
-    <th> Free Throw Percentage </th>
-    <th> Steals </th>
-    <th> Blocks </th>
-    <th> Turnovers </th>
-    </tr>
-    <tr> 
-    <td> ${$("#player-name").val()} </td>
     <td> ${playerAvg[0]["points"]} </td>
+    </tr>
+    <tr>
+    <th> Rebounds </th>
     <td> ${playerAvg[0]["rebounds"]} </td>
+    </tr>
+    <tr>
+    <th> Assists </th>
     <td> ${playerAvg[0]["assists"]} </td>
+    </tr>
+    <tr>
+    <th> Field Goal Percentage </th>
     <td> ${playerAvg[0]["fgp"]} </td>
+    </tr>
+    <tr>
+    <th> Three Point Percentage </th>
     <td> ${playerAvg[0]["tpp"]} </td>
+    </tr>
+    <tr>
+    <th> Free Throw Percentage </th>
     <td> ${playerAvg[0]["ftp"]} </td>
+    </tr>
+    <tr>
+    <th> Steals </th>
     <td> ${playerAvg[0]["steals"]} </td>
+    </tr>
+    <th> Blocks </th>
     <td> ${playerAvg[0]["blocks"]}</td>
-    <td> ${playerAvg[0]["turnovers"]}</td>
-     </tr>
-
+    </tr>   
+    <tr>
+    <th> Turnovers </th>
+     <td> ${playerAvg[0]["turnovers"]}</td>
+    </tr>
     </table>`
 }
