@@ -135,6 +135,37 @@ list-style-type: none;
     max-width: 70%;
     display: inline;
 }
+/* ---------------------------------------- Player Data --------------------------------------------------------------------*/
+.data{
+    margin: 0 auto;
+}
+.player-entry{
+    margin: 1rem auto;
+}
+
+.player-data{
+text-align: center;
+margin: 0 auto;
+width:100%;
+}
+#nba-user-data{
+    text-align: center;
+}
+.player-header{
+    padding: 1rem 0;
+}
+
+.headshot{
+    display: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 2rem;
+}
+/* ---------------------------------------- Player Images --------------------------------------------------------------------*/
+.gallery{
+ margin: 0 auto;
+}
+
+
 /* ---------------------------------------- Responsive Design Elements --------------------------------------------------------------------*/
 @media screen and (min-width: 600px) {
   .news p{
@@ -177,31 +208,7 @@ list-style-type: none;
         font-size: 1.5rem;
     }
 }
-/* ---------------------------------------- Player Data --------------------------------------------------------------------*/
-.data{
-    margin: 0 auto;
-}
-.player-entry{
-    margin: 1rem auto;
-}
 
-.player-data{
-text-align: center;
-margin: 0 auto;
-width:100%;
-}
-#nba-user-data{
-    text-align: center;
-}
-.player-header{
-    padding: 1rem 0;
-}
-
-.headshot{
-    display: contain;
-    background-repeat: no-repeat;
-    padding-bottom: 2rem;
-}
 /* ---------------------------------------- Interactivity classes --------------------------------------------------------------------*/
 .underline{
     text-decoration: underline;
