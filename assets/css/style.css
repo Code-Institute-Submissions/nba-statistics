@@ -7,6 +7,7 @@ body{
     margin: 3rem auto;
     font-family: "Roboto",sans-serif;
     width: auto;
+    height: 100vh;
 }
 .row div{
     padding:0;
@@ -157,7 +158,7 @@ width:100%;
     padding-bottom: 2rem;
 }
 .player-form{
-    margin:0 auto;
+    margin:2rem auto;
 }
 /* ---------------------------------------- Auto Complete --------------------------------------------------------------------*/
 .autocomplete {
@@ -182,19 +183,27 @@ width:100%;
   border-bottom: 1px solid #d4d4d4;
 }
 .autocomplete-items div:hover {
-  /*when hovering an item:*/
   background-color: #e9e9e9;
 }
 .autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
-/* ---------------------------------------- Player Images --------------------------------------------------------------------*/
+/* ---------------------------------------- Player & Loader Images --------------------------------------------------------------------*/
 .gallery{
  margin: 0 auto;
 }
 
+#loader{
+    
+    margin: 0 auto;
+    text-align: center;
+}
+#loader img{
+    width: 20%;
+    height: auto;
+    
+}
 
 /* ---------------------------------------- Responsive Design Elements --------------------------------------------------------------------*/
 @media screen and (min-width: 600px) {

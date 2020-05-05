@@ -1,3 +1,15 @@
+function imageClick(name){
+    var name=name.toLowerCase();
+    getPlayers(name);
+
+    $("#loader").html(
+        `<div id="loader">
+            <img src="assets/images/loading.gif" alt="loading..." />
+        </div>`);
+    $("#nba-user-data").html("");
+    $("#player-image-container").html("");
+};
+
 $(document).ready(function () {
     autocomplete(document.getElementById("player-name"));
 })

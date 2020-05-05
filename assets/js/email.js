@@ -1,5 +1,5 @@
 function sendMail(contactForm){
-    emailjs.send("gmail","player",{
+    emailjs.send("gmail","template_LYsBkwyA",{
         "from_name": contactForm.name.value,
         "reply_to": contactForm.emailaddress.value,
         "message_html": contactForm.projectsummary.value
