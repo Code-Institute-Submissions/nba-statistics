@@ -34,18 +34,8 @@
                             </button>
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav">
-
-							<!-- Taken from https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp -->
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle text-light" href="index.html" id="navbardrop"
-									data-toggle="dropdown">
-									Home
-								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="index.html">Team Standings</a>
-									<a class="dropdown-item" href="index.html">News</a>
-									<a class="dropdown-item" href="index.html">Video</a>
-								</div>
+							<li class="nav-item">
+								<a class="nav-link text-light" href="index.html">Home</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link text-light" href="player.html">Players</a>
@@ -68,7 +58,7 @@
 		
 			<div class="row">
 				<div class="col-12">
-					<h3 class="player-header text-center">Search for you favourite NBA player</h3>
+					<h3 class="player-header uppercase text-center">Search for you favourite NBA player</h3>
 				</div>
 				<form autocomplete="off" class="player-form">
 					<div class="player-entry autocomplete">
@@ -87,7 +77,7 @@
 			<img class="gallery-item" onclick="imageClick('Giannis Antetokounmpo')" src="assets/images/giannis.jpg"  alt="Giannis Antetokounmpo"/>
 			<img class="gallery-item" onclick="imageClick('Stephen Curry')" src="assets/images/steph.jpg"  alt="Steph Curry"/>
 			<img class="gallery-item" onclick="imageClick('Lebron James')" src="assets/images/lebron.jpg"  alt="Lebron James"/>
-            <img class="gallery-item" onclick="imageClick('Kevin Durant')" src="assets/images/kevin.jpg"  alt="Kevin Durant"/>
+            <img class="gallery-item d-none d-sm-inline" onclick="imageClick('Kevin Durant')" src="assets/images/kevin.jpg"  alt="Kevin Durant"/>
 			<img class="gallery-item" onclick="imageClick('Kawhi Leonard')" src="assets/images/kawhi.jpg"  alt="Kawhi Leonard"/>
             <img class="gallery-item" onclick="imageClick('Damian Lillard')" src="assets/images/damian.jpg"  alt="Damian Lillard"/>
             <img class="gallery-item" onclick="imageClick('Paul George')" src="assets/images/paul.jpg"  alt="Paul George"/>
@@ -124,14 +114,9 @@
 
 	</footer>
 
-	<script src="https://code.jquery.com/jquery-3.5.0.min.js"
-		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
 	<script type="text/javascript" src="assets/js/player-info.js"></script>
 </body>
 

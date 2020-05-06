@@ -137,9 +137,11 @@ list-style-type: none;
     display: inline;
 }
 /* ---------------------------------------- Player Data --------------------------------------------------------------------*/
+.player-header{
+    font-weight: 300;
+}
 .data{
     margin: 0 auto;
-     height: 50vh;
 }
 .player-data{
 text-align: center;
@@ -150,19 +152,24 @@ width:90%;
     text-align: center;
 }
 #nba-user-data{
-    text-align: center;
+    margin: 3rem auto;
 }
 .player-header{
     padding: 1rem 0;
+    font-size: 1.5rem;
+    margin: 0 1.5rem;
 }
 
 .headshot{
     display: contain;
     background-repeat: no-repeat;
     padding-bottom: 2rem;
+    transition: all 2s ease-in;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 .player-form{
-    margin:2rem auto;
+    margin:0 auto;
 }
 /* ---------------------------------------- Auto Complete --------------------------------------------------------------------*/
 .autocomplete {
@@ -197,7 +204,7 @@ width:90%;
 .gallery{
   clear:both;
   line-height: 0;
-  column-count: 3;
+  column-count: 2;
   column-gap: 0px;
   margin: 0 20px;
 
@@ -208,14 +215,18 @@ width:90%;
 
 #loader{
     
-    margin: 0 auto;
+    margin: 2rem auto;
     text-align: center;
 }
 #loader img{
     width: 20%;
     height: auto;
+    transition: all 2s ease-in;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
     
 }
+
 
 /* ---------------------------------------- Responsive Design Elements --------------------------------------------------------------------*/
 @media screen and (min-width: 600px) {
@@ -231,7 +242,10 @@ width:90%;
       position:relative;
       bottom:1rem;
   }
- 
+  .gallery{
+ column-count: 3;
+ margin-bottom: 3rem;
+  }
 }
 
 @media only screen and (min-width:768px) and (max-width: 1025px){
@@ -258,7 +272,9 @@ width:90%;
 .icon{
         font-size: 1.5rem;
     }
+    
 }
+
 
 /* ---------------------------------------- Interactivity classes --------------------------------------------------------------------*/
 .underline{
