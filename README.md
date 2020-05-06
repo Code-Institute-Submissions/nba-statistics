@@ -24,6 +24,8 @@ In this section, you should go over the different parts of your project, and des
 * Video Section - section shows videos that boost engagement and shows interesting news from around the NBA. Weekly updates would be plays of the week from that week when the season is back on.
 * News Section - with links to relevant news stories this section is interactive allowing users to show more content from the stories that interest them before following the link.
 * Player Search - a search function using rapidAPI allows users to search any player in the NBA this season and get their averages for all the games they have played in their career and show up to date stats for that player. 
+* Player Search Autofill - as NBA players can often have difficult names to spell (e.g Kristaps Porzingis) an autofill box has been added with all player names searchable.
+* Image player search - For users not familiar with the NBA a series of images are displayed on the page which when clicked show the stats for the star in the picture.
 * Contact form - a contact form for users to email the site to request players they want information on. This could be past NBA stars not currently in the league. 
 
 ###Existing Features

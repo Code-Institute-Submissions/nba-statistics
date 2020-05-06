@@ -139,11 +139,15 @@ list-style-type: none;
 /* ---------------------------------------- Player Data --------------------------------------------------------------------*/
 .data{
     margin: 0 auto;
+     height: 50vh;
 }
 .player-data{
 text-align: center;
 margin: 0 auto;
-width:100%;
+width:90%;
+}
+#player-image-container{
+    text-align: center;
 }
 #nba-user-data{
     text-align: center;
@@ -191,7 +195,15 @@ width:100%;
 }
 /* ---------------------------------------- Player & Loader Images --------------------------------------------------------------------*/
 .gallery{
- margin: 0 auto;
+  clear:both;
+  line-height: 0;
+  column-count: 3;
+  column-gap: 0px;
+  margin: 0 20px;
+
+}
+.gallery-item{
+    width:100%;
 }
 
 #loader{
@@ -255,4 +267,7 @@ width:100%;
 }
 .uppercase{
     text-transform: uppercase;
+}
+.image-highlight{
+    opacity: 0.6;
 }

@@ -10,6 +10,13 @@ function imageClick(name){
     $("#player-image-container").html("");
 };
 
+$(".gallery-item").mouseenter(function () {
+    $(this).addClass("image-highlight");
+});
+$(".gallery-item").mouseleave(function () {
+    $(this).removeClass("image-highlight");
+});
+
 $(document).ready(function () {
     autocomplete(document.getElementById("player-name"));
 })
@@ -234,6 +241,7 @@ function returnPlayerStats(playerId, playerName) {
                 turnovers += playerStats[i]["turnovers"];
             }
             playerAvg[0] = {
+                name: playerName.toUpperCase(),
                 points: (points / gamesPlayed).toFixed(2),
                 rebounds: (rebounds / gamesPlayed).toFixed(2),
                 assists: (assists / gamesPlayed).toFixed(2),
@@ -256,7 +264,7 @@ function writeToDocument(playerAvg, playerName) {
     var lo = document.getElementById("loader");
     var el = document.getElementById("nba-user-data");
     lo.innerHTML = "";
-    el.innerHTML = `<h4 class="uppercase">Averages Per Game For ${$("#player-name").val()} </h4>
+    el.innerHTML = `<h4 class="uppercase">Averages Per Game For ${playerAvg[0]["name"]} </h4>
     <table class="player-data table-bordered">
     <tr>
     <th> Points </th>
