@@ -125,7 +125,6 @@ list-style-type: none;
 /* ---------------------------------------- Contact Form --------------------------------------------------------------------*/
 .contact-heading{
     font-family: "Exo", sans-serif;
-    font-weight: 100;
     margin-top: 25px;
     margin-bottom: 20px;
 }
@@ -137,14 +136,11 @@ list-style-type: none;
     display: inline;
 }
 /* ---------------------------------------- Player Data --------------------------------------------------------------------*/
-.player-header{
-    font-weight: 300;
-}
+
 .data{
     margin: 0 auto;
 }
 .player-data{
-text-align: center;
 margin: 0 auto;
 width:90%;
 }
@@ -153,17 +149,22 @@ width:90%;
 }
 #nba-user-data{
     margin: 3rem auto;
+    text-align: center;
 }
+
 .player-header{
     padding: 1rem 0;
     font-size: 1.5rem;
-    margin: 0 1.5rem;
+    margin: 0 auto;
+    max-width: 80%;
+    font-weight: 300;
+    font-family: "Exo", sans-serif;
 }
 
 .headshot{
     display: contain;
     background-repeat: no-repeat;
-    padding-bottom: 2rem;
+    padding:2rem 0;
     transition: all 2s ease-in;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
