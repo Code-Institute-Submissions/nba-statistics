@@ -162,7 +162,7 @@ function getPlayers(playerName) {
 
         },
         error: function (error) {
-            console.log(error);
+           $("#loader").html("<p> Data is not currently available. Please try again later </p>");
         }
     });
 }
@@ -256,7 +256,7 @@ function returnPlayerStats(playerId, playerName) {
 
         },
         error: function (error) {
-
+            $("#loader").html("<p> Data is not currently available. Please try again later </p>");
         }
     });
 }
