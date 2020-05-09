@@ -23,8 +23,8 @@ function getData() {
                     teamId: results.api.standings[i]["teamId"],
                     conference: results.api.standings[i]["conference"]["name"],
                     rank: results.api.standings[i]["conference"]["rank"],
-                    wins: results.api.standings[i]["conference"]["win"],
-                    loss: results.api.standings[i]["conference"]["loss"],
+                    wins: results.api.standings[i]["win"],
+                    loss: results.api.standings[i]["loss"],
                     winPercentage: results.api.standings[i]["winPercentage"],
                     homeWin: results.api.standings[i]["home"]["win"],
                     homeLoss: results.api.standings[i]["home"]["loss"],
@@ -144,7 +144,7 @@ function writeToDocument(teams) {
         )
     }
     
-    console.log(teamsEast);
+    
     el.innerHTML = `<table class="table-bordered conference-standings">
     <tr><th colspan="8"> Eastern Conference </th></tr>
     <tr><th> Rank </th>

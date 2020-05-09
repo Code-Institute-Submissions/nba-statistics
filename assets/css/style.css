@@ -142,6 +142,10 @@ list-style-type: none;
 .player-data{
 margin: 0 auto;
 width:90%;
+
+}
+.player-data th{
+font-weight: 500;
 }
 #player-image-container{
     text-align: center;

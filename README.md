@@ -90,12 +90,11 @@ Used to insert more aesthetically pleasing fonts to the CSS
 https://fonts.googleapis.com/
 
 ##Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. 
-Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+### Conference standings
+* Go to "Home" page.
+* Locate 'Conference Standings' section by clicking dropdown menu on navbar and clicking 'Conference Standings'. Confirm loading of all team data, names and logos and order of ranking.
+* Compared results to https://www.nba.com/standings and verified results match.
 
 ### Videos
 * Go to "Home" page.
@@ -104,7 +103,7 @@ For any scenarios that have not been automated, test the user stories manually a
 * Try clicking pausing the video by clicking inside the play area and verify the video pauses.
 * Try to extend the video to full screen by clicking the button in the bottom right corner and confirm video extends.
 
-### News
+### News Articles
 * Go to "Home" Page.
 * Locate 'News' section by clicking dropdown menu on navbar and clicking 'News'.Confirm scroll to relevent section.
 * Try to click 'More' button on first story and confirm the text and image becomes displayed.
@@ -122,7 +121,7 @@ For any scenarios that have not been automated, test the user stories manually a
 ### Player Search images
 * Go to 'Player' Page.
 * Mouse over images and verify the toggling of the highlight class to show they are clickable.
-* Try to click the first image of "Giannis Antetokounmpo".
+* Try to click the first image of "Giannis Antetokounmpo" and verified data and headshot image loaded correctly, with loader gif correctly showing before. 
 
 ###Contact form:
 * Go to the "Contact Us" page
@@ -131,3 +130,65 @@ For any scenarios that have not been automated, test the user stories manually a
 * Try to submit the form with all inputs valid and verify that a success message appears.
 * Checked email response coming through from email.js to personal email in correct form.
 
+###Responsive Design
+..The project was designed with a mobile first approach and aims to be aesthetically pleasing and well ordered on all screen sizes. Generally there is not much 
+difference between desktop and tablet screen sizes as during development content seemed to work for both, with the only major difference being the font size at the larger screen size.
+
+..For the home page on mobile versions the standings table is slightly thinner, with the shortened team name used and with several collumns including home and away wins and losses, 
+and the team logo removed to fit the screen size. Videos are then displayed with vertical flow, instead of horizontally instead of the horizontal format used on tablet and desktop view. News 
+articles similarly have a top down flow at the smaller size with image and text on top of each other. Navbar elements are condensed into a burger dropdown 
+to reduce the space they take up on mobile view and then are evenly spaced on tablet and desktop with a slight margin between the logo and nav elements. Nav elements within the home page use a dropdown function.
+
+..On the player page using mobile screen size the largest player image is not displayed and the rest use a 2 collumn approach with smaller image sizes. The player data
+is loaded in image on top and data below, compared to side by side on tablet and desktop. The space reserved for the data is also larger on tablet and desktop. Similarly the 
+Nav elements use the consistent approach of being condensed to a burger dropdown on mobile resolution. 
+
+..Finally on the contact page, header elements have a smaller width on mobile sizes compared to other sizes with more of the text being wrapped.
+Once again for consistence the Navbar uses the previously detailed approach.
+
+###Bugs 
+Here is detailed several of the bugs discovered through testing and developments
+
+* Maxing out API requests on retrieving standings 
+.. Very early on in development the API request used XMLHTTPRequest, however as the code developed and the standing data needed to be ordered by ranking
+several for loops became required and the function was then in a loop of making a request each time the loop search for a specific ranking. With only 1000 requests per day the 
+page was maxing the daily request in one or two page loads. API requests were therefore altered to Ajax and a global variable was initially defined to avoid 
+repeat requests for each API. 
+
+* Error message 'Player not found - please enter another player or check the spelling' appearing while loading.
+.. This bug came early on in development of the player search function. A correct input would cause the loader and error message to display at the same time
+and then the data to be loaded. The fix was to alter the player matching function ('playerRequest') to using a 'filter' method creating a new variable and 
+then assessing the length of that variable. If the length was 0 the data had not been passed to it meaning the name did not exist and the error message would show. 
+
+* Player search function case sensitive bug
+.. When entering the name to the search bar it originally only worked if the first and last name were capitalised. The fixe was relatively easy 
+and just required a 'toLowerCase' method on the data entered and the player name data from the API. After this was completed the autocomplete was 
+initiated making it redundant however as autofill automatically capitalised first and last. The method remains in case the user does not use the autofill selection however.
+
+* Previous player data remaining after a search
+.. When one search had been attempted and returned data and a new selection, either by the search function or image selector was used the loading gif was coming in 
+above the previous player data, with data only being replace upon completion of the function to 'writeToDocument'. Easily fixed with a clearing the "#nba-user-data" and "#player-image-container"
+at the start of each new search. 
+
+* Total home wins and losses not adding up to total wins/loses in Standings table
+.. There was a slight error when data was checked as function 'getData' was originally searching for '[conference][wins]' and '[conference][loses]' 
+from the API which was different than total wins and loses. 
+
+
+##Deployment
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+
+In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+
+Different values for environment variables (Heroku Config Vars)?
+Different configuration files?
+Separate git branch?
+In addition, if it is not obvious, you should also describe how to run your code locally.
+
+##Credits
+Content
+The text for section Y was copied from the Wikipedia article Z
+##Media
+The photos used in this site were obtained from ...
+##Acknowledgements
+I received inspiration for this project from Tom Smith and assistance with his personal user story. 
