@@ -42,17 +42,17 @@ In this section, you should go over the different parts of your project, and des
 1. News Section - allows non basketball fan users to be engaged by news articles by clicking the 'show more' button or following the link to the external site. 
 		
 1. Player Search - allows NBA fans to view the career stats of their favourite player by typing in their name and clicking search. 
-		 - implemented using the player-info.js script
+	- implemented using the player-info.js script
 	
 1. Player Search Autofill - allows basketball fans to find specific players names by typing in the first letter and scrolling to the name they want and clicking search to view career stats. 
-			  - implemented using the player-info.js script and guided from code at https://www.w3schools.com/howto/howto_js_autocomplete.asp
+	 - implemented using the player-info.js script and guided from code at https://www.w3schools.com/howto/howto_js_autocomplete.asp
 
 1. Image Player Search - allows non basketball fan users to interact with the images on the screen to see more about the player in the picture, by clicking it. 
-		       - implemented using the player-info.js script
+	 - implemented using the player-info.js script
 
 1. Contact Form - allows all users to give feedback on the site, by filling in the form and clicking send. 
-		- allows developers to improve the site and reach out to client base, by sending them an email when someone completes and sends the contact form. 
-		- implemented using the email.js script
+	- allows developers to improve the site and reach out to client base, by sending them an email when someone completes and sends the contact form. 
+	- implemented using the email.js script
 
 
 ###Features Left to Implement
@@ -97,11 +97,37 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
+### Videos
+* Go to "Home" page.
+* Locate 'Video' section by clicking dropdown menu on navbar and clicking 'Video'. Confirm scroll to relevent section.
+* Try to play the first video by clicking play and confirm video plays.
+* Try clicking pausing the video by clicking inside the play area and verify the video pauses.
+* Try to extend the video to full screen by clicking the button in the bottom right corner and confirm video extends.
+
+### News
+* Go to "Home" Page.
+* Locate 'News' section by clicking dropdown menu on navbar and clicking 'News'.Confirm scroll to relevent section.
+* Try to click 'More' button on first story and confirm the text and image becomes displayed.
+* Try mouseover the title link and 'read more' text to confirm underlined on mouseover.
+* Try to click the bold 'read more' text and verify an external page opens with the story. 
+* Try to click the title of the article and verified an external page opens to story page. 
+
+### Player Search Box
+* Go to 'Player' Page.
+* Type in letter 'a' in search box and confirm that the autofill box appears.
+* Type the name 'Alex' in the search box and confirm autofill box can be clicked and will correctly select "Alex Abrines" and will not show once selected.
+* Tried to click 'Search' button with 'Alex Abrines' entered and confirm the loading gif appears until the information and image for alex abrines is loaded.
+* Entered 'Gardeners World' into search box and confirmed the loading gif and error message prompting the user to enter another name or check spelling. 
+
+### Player Search images
+* Go to 'Player' Page.
+* Mouse over images and verify the toggling of the highlight class to show they are clickable.
+* Try to click the first image of "Giannis Antetokounmpo".
 
 ###Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-Checked email response coming through from email.js to personal email in correct form.
+* Go to the "Contact Us" page
+* Try to submit the empty form and verify that an error message about the required fields appears
+* Try to submit the form with an invalid email address and verify that a relevant error message appears
+* Try to submit the form with all inputs valid and verify that a success message appears.
+* Checked email response coming through from email.js to personal email in correct form.
 

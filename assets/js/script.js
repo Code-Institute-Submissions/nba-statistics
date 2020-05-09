@@ -5,7 +5,7 @@ $(document).ready(function () {
 })
 
 
-// link to standings data (GET) -- https://api-nba-v1.p.rapidapi.com/standings/%7Bleague%7D/%7Bseasonyear%7D/conference/%7Bconference%7D
+// link to standings data for standings table -- https://api-nba-v1.p.rapidapi.com/standings/%7Bleague%7D/%7Bseasonyear%7D/conference/%7Bconference%7D
 function getData() {
     $.ajax({
         url: "https://api-nba-v1.p.rapidapi.com/standings/standard/2019/",
@@ -178,6 +178,12 @@ $(".news").children("button").click(function () {
 
 $(".news a").children("h4").mouseenter(function () {
     $(this).addClass("underline");
+});
+$(".news a strong").mouseenter(function () {
+    $(this).addClass("underline");
+});
+$(".news a strong").mouseleave(function () {
+    $(this).removeClass("underline");
 });
 $(".news a").children("h4").mouseleave(function () {
     $(this).removeClass("underline");
