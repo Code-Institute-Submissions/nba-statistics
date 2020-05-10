@@ -25,7 +25,7 @@ function getData() {
                     rank: results.api.standings[i]["conference"]["rank"],
                     wins: results.api.standings[i]["win"],
                     loss: results.api.standings[i]["loss"],
-                    winPercentage: results.api.standings[i]["winPercentage"],
+                    winPercentage: parseFloat(results.api.standings[i]["winPercentage"]*100).toFixed(1),
                     homeWin: results.api.standings[i]["home"]["win"],
                     homeLoss: results.api.standings[i]["home"]["loss"],
                     awayWin: results.api.standings[i]["away"]["win"],

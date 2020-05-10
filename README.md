@@ -1,28 +1,41 @@
 # NBA-statistics
 
 
-The site is essentially a newsletter designed to promote NBA basketball through the providing of information on players, teams, media and news from around the nba.
+..The site is essentially a newsletter designed to promote NBA basketball through the providing of information on players, teams, media and news from around the nba.
 Users will be able to see up to date league rankings for the season, search for up to date statistics from their favourite player and see media
 from the latest games to be played. They will also have the ability to contact the service to request data for specific players as all current nba players are listed. The value to the user will be the gaining of information through searches, viewing media and related content around the nba
 and contacting the service with specific feedback or requests. The value to the provider will be increased traffic and outreach to fans and potential fans,
 , direct feedback and usable data on players favoured by users and an interactive site that is engaging to the user. 
 
 ##UX
-The users for this website can be split into three main groups. The first are general type users who are already fans of basketball or the NBA in general and will likely be looking for specific
+..The users for this website can be split into three main groups. The first are general type users who are already fans of basketball or the NBA in general and will likely be looking for specific
 information and have come to the site with a specific purpose. These users are likely the ones who will recieve the most engagement. The second group of users are organisational users connected to
 the league and its subsidieres itself, be that the NBA organisation or specific franchises within the league. This would be the group that stands to benefit through engagement with 
 their customer base. The third group are more general type users that do not fit into either category, who are not necessarily basketball fans and perhaps happened across the site by accident or were 
 recommended it by a friend. This group will likely be less engage but are the ones who are set to learn the most from the site as all information may be things they haven't seen before. 
 
 ###User Stories
-As an NBA Fan, I want to keep up to date with current players statistics and leage standings by visiting a site regularly that has this information as the season progresses.
-As a basketball fan, I want a convenient place to see stories and video from a variety of mainstream media outlets, by visiting a site that has all of them in one place.
-As an NBA player/ franchise, I want to grow my following of fans and supporters to increase my own popularity and the popularity of the game of basketball. 
-As an NBA official representative, I want to publicise the NBA and its teams and content, to increase the popularity of the game and increase revenue from the customer base through sales, traffic and engagement.
-As a user who does not fit into either category, I want to learn more about the game of basketball, to see if I might want to play it some day.
+* As an NBA Fan, I want to keep up to date with current players statistics and leage standings by visiting a site regularly that has this information as the season progresses.
+* As a basketball fan, I want a convenient place to see stories and video from a variety of mainstream media outlets, by visiting a site that has all of them in one place.
+* As an NBA player/ franchise, I want to grow my following of fans and supporters to increase my own popularity and the popularity of the game of basketball. 
+* As an NBA official representative, I want to publicise the NBA and its teams and content, to increase the popularity of the game and increase revenue from the customer base through sales, traffic and engagement.
+* As a user who does not fit into either category, I want to learn more about the game of basketball, to see if I might want to play it some day.
+
+### UX Scope 
+.. As detailed in the user stories the main user type will be fans of the game of basketball and their main desire is to have up to date content and 
+data for goings on in the league all in one place. Eye catching content in the forms of videos, news articles and team data will be used throughout the project to 
+draw in users and provide value. This will also be valuable to users not familiar with the game by being informative and engaging. Another feature users may not know they need will be the ability to find data on any player in the league via a 
+search function. This will allow them to search even lesser known players from their favourite teams and see there stats for their career. Limiting factors to data
+will be API requests (only 1000 per day) meaning that attempts will need to be made to keep API requests per refresh to a minimum. In the case of extended traffic to the 
+website upgrading to a paid service may be necessary. 
+
+### UX Surface
+The site will mainly use the font family 'Exo' for styling of all text. Navbar header and footer elements will be sticky (top and bottom) and on the larger pages will assist navigation through 
+interactivity. A blue background will be used for both following/as near to as possible the NBA logo color scheme. Social links will use FontAwesome icons in footer elements.
+The site will be viewable on all screen sizes with a mobile first approach to responsiveness. Differences between screen layouts have been detailed in wireframes however as it is likely 
+tablet and desktop view will be the same wireframes have been included for mobile and desktop view only. See attached file in assets/wireframes for details.
 
 ##Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 * Conference Standing section - this section uses the rapidAPI NBA API to provide up to date information on the standings for the season of each team in the Eastern and Western Conference.
 * Video Section - section shows videos that boost engagement and shows interesting news from around the NBA. Weekly updates would be plays of the week from that week when the season is back on.
 * News Section - with links to relevant news stories this section is interactive allowing users to show more content from the stories that interest them before following the link.
@@ -32,8 +45,6 @@ In this section, you should go over the different parts of your project, and des
 * Contact form - a contact form for users to email the site to request players they want information on. This could be past NBA stars not currently in the league. 
 
 ###Existing Features
-
-1. - allows users X to achieve Y, by having them fill out Z
 
 1. Conference Standing Section - allows NBA fans to see how their team is doing in the competition by visualising the results of the whole season with number of wins and losses and their team ranking by conference. 
 
@@ -95,6 +106,7 @@ https://fonts.googleapis.com/
 * Go to "Home" page.
 * Locate 'Conference Standings' section by clicking dropdown menu on navbar and clicking 'Conference Standings'. Confirm loading of all team data, names and logos and order of ranking.
 * Compared results to https://www.nba.com/standings and verified results match.
+* Alter URL to an incorrect link and confirm the error message is displayed in the event API is unavailable. 
 
 ### Videos
 * Go to "Home" page.
@@ -116,7 +128,8 @@ https://fonts.googleapis.com/
 * Type in letter 'a' in search box and confirm that the autofill box appears.
 * Type the name 'Alex' in the search box and confirm autofill box can be clicked and will correctly select "Alex Abrines" and will not show once selected.
 * Tried to click 'Search' button with 'Alex Abrines' entered and confirm the loading gif appears until the information and image for alex abrines is loaded.
-* Entered 'Gardeners World' into search box and confirmed the loading gif and error message prompting the user to enter another name or check spelling. 
+* Entered 'Gardeners World' into search box and confirmed the loading gif followed by error message prompting the user to enter another name or check spelling. 
+* Altered first and second API URL's in term and confirmed presence of error message asking user to try again later in the event API is unavailable. 
 
 ### Player Search images
 * Go to 'Player' Page.
@@ -147,7 +160,7 @@ Nav elements use the consistent approach of being condensed to a burger dropdown
 Once again for consistence the Navbar uses the previously detailed approach.
 
 ###Bugs 
-Here is detailed several of the bugs discovered through testing and developments
+..Here is detailed several of the bugs discovered through testing and developments:
 
 * Maxing out API requests on retrieving standings 
 .. Very early on in development the API request used XMLHTTPRequest, however as the code developed and the standing data needed to be ordered by ranking
@@ -178,17 +191,19 @@ from the API which was different than total wins and loses.
 ##Deployment
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
+.. The project was created using Gitpod for Github. Initially the main page was created in conjunction with the script.js file to provide functionality
+and interactivity. The style was formated using style.css 
+
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
 
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+Th website can be initiated using the command 'python3 -m http.server
 
 ##Credits
-Content
-The text for section Y was copied from the Wikipedia article Z
+###Content
+*The text for News section was copied from the New York Times website https://www.nytimes.com/
+*The data for conference standings and player data was implemented using RapidAPI's NBA API found here https://rapidapi.com/api-sports/api/api-nba
 ##Media
-The photos used in this site were obtained from ...
+The photos used in this site were obtained from https://espn.co.uk, https://wallpapersafari.com/, https://clutchpoints.com/, https://dailymail.co.uk, https://www.wsj.com/ and 
 ##Acknowledgements
-I received inspiration for this project from Tom Smith and assistance with his personal user story. 
+*I received inspiration for this project from Tom Smith and assistance with his personal user story. 
+*I would like to thank Rhey Magcalas for her help and support.
