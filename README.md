@@ -67,12 +67,13 @@ tablet and desktop view will be the same wireframes have been included for mobil
 
 
 ###Features Left to Implement
-*A team rosters and info section. 
-*Adding team information and more general information to the player search.
-*Increasing the quantity of news articles and video content available.
-*A recent games section with the latest games from the last week and their box scores.
-*Attach another player search or allow for two searches to compare the data for two players.
-*Adding in a listener for players called to give data on number of searches for each player to see which are favoured by fans. This adds value to 
+* A team rosters and info section. 
+* Adding team information and more general information to the player search (i.e teams player plays for, physical attributes, etc) - not currently attached as information not available for all players searchable.
+* Increasing the quantity of news articles and video content available.
+* A recent games section with the latest games from the last week and their box scores.
+* Attach another player search or allow for two searches to compare the data for two players.
+* Adding in a listener for players called to give data on number of searches for each player to see which are favoured by fans. 
+* Adding a Youtube search function to player search to show player highlights videos from search.
 
 ##Technologies Used
 
