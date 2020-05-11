@@ -18,6 +18,7 @@ function getData() {
         contentType: 'application/json; charset=utf-8',
         success: function (results) {
             var team_data = {};
+            // Persistent warning when validating for not using '.' notation for this and future sections, however code did not function when this was used.  
             for (i = 0; i < results.api.standings.length; i++) {
                 team_data[results.api.standings[i]["teamId"]] = {
                     teamId: results.api.standings[i]["teamId"],
