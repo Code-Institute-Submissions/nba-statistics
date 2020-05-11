@@ -1,5 +1,5 @@
-function imageClick(name){
-    var name=name.toLowerCase();
+function imageClick(name) {
+    var name = name.toLowerCase();
     getPlayers(name);
 
     $("#loader").html(
@@ -8,7 +8,7 @@ function imageClick(name){
         </div>`);
     $("#nba-user-data").html("");
     $("#player-image-container").html("");
-};
+}
 
 $(".gallery-item").mouseenter(function () {
     $(this).addClass("image-highlight");
@@ -19,13 +19,13 @@ $(".gallery-item").mouseleave(function () {
 
 $(document).ready(function () {
     autocomplete(document.getElementById("player-name"));
-})
+});
 
 
 // autocomplete function from https://www.w3schools.com/howto/howto_js_autocomplete.asp - edited
 function autocomplete(inp) {
 
-    var names = []
+    var names = [];
     $.ajax({
         url: "https://api-nba-v1.p.rapidapi.com/players/league/standard",
         method: 'GET',
@@ -37,8 +37,7 @@ function autocomplete(inp) {
         contentType: 'application/json; charset=utf-8',
         success: function (results) {
             for (i = 0; i < results.api.players.length; i++) {
-                names[i] = results.api.players[i]["firstName"] + " " + results.api.players[i]["lastName"]
-                
+                names[i] = results.api.players[i]["firstName"] + " " + results.api.players[i]["lastName"];
             }
             return names;
         },
@@ -47,7 +46,7 @@ function autocomplete(inp) {
         }
 
     });
-    
+
     var currentFocus;
     inp.addEventListener("input", function (e) {
         var a, b, i, val = this.value;
@@ -114,17 +113,17 @@ function autocomplete(inp) {
         }
     }
     document.addEventListener("click", function (e) {
-        if (e.target == $("#submit")){
+        if (e.target == $("#submit")) {
             fetchPlayerInfo();
-        }else{
-        closeAllLists(e.target);
+        } else {
+            closeAllLists(e.target);
         }
     });
 }
 
 
 
-
+//Player Search feature created using RapidAPI's player and statistcs APIs and https://nba-players.herokuapp.com/ for headshots
 function fetchPlayerInfo(event) {
     var playerName = $("#player-name").val().toLowerCase();
     getPlayers(playerName);
@@ -162,14 +161,14 @@ function getPlayers(playerName) {
 
         },
         error: function (error) {
-           $("#loader").html("<p> Data is not currently available. Please try again later </p>");
+            $("#loader").html("<p> Data is not currently available. Please try again later </p>");
         }
     });
 }
 
 function playerRequest(all_players, playerName) {
 
-    let p = all_players.filter(player => player.fullName == playerName);
+    var p = all_players.filter(player => player.fullName == playerName);
     console.log(p);
     if (p.length == 0) {
         $("#loader").html("<p> Player not found - please enter another player or check the spelling </p>");
@@ -181,7 +180,7 @@ function playerRequest(all_players, playerName) {
         var lastName = "";
         lastName = p[0]["lastName"];
         getPlayerImage(firstName, lastName);
-    };
+    }
 }
 
 function getPlayerImage(firstName, lastName) {
@@ -203,8 +202,8 @@ function returnPlayerStats(playerId, playerName) {
         },
         contentType: 'application/json; charset=utf-8',
         success: function (results) {
-            var playerStats = {}
-            for (i in results.api.statistics) {
+            var playerStats = {};
+            for (var i in results.api.statistics) {
                 playerStats[i] = {
                     points: Number(results.api.statistics[i]["points"]),
                     rebounds: Number(results.api.statistics[i]["totReb"]),
@@ -215,7 +214,7 @@ function returnPlayerStats(playerId, playerName) {
                     steals: Number(results.api.statistics[i]["steals"]),
                     blocks: Number(results.api.statistics[i]["blocks"]),
                     turnovers: Number(results.api.statistics[i]["turnovers"])
-                }
+                };
             }
             var playerAvg = {};
             var points = 0;
@@ -251,7 +250,7 @@ function returnPlayerStats(playerId, playerName) {
                 steals: (steals / gamesPlayed).toFixed(2),
                 blocks: (blocks / gamesPlayed).toFixed(2),
                 turnovers: (turnovers / gamesPlayed).toFixed(2)
-            }
+            };
             writeToDocument(playerAvg, playerName);
 
         },
@@ -301,5 +300,5 @@ function writeToDocument(playerAvg, playerName) {
     <th> Turnovers </th>
      <td> ${playerAvg[0]["turnovers"]}</td>
     </tr>
-    </table>`
+    </table>`;
 }

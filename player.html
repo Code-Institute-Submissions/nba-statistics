@@ -54,37 +54,39 @@
 
 		</div>
 	</header>
+    <!-- Player Search feature created using RapidAPI's player and statistcs APIs and https://nba-players.herokuapp.com/ for headshots-->
 	<section class="player-section">
-		
-			<div class="row">
-				<div class="col-12">
-					<h3 class="player-header uppercase text-center">Search for you favourite NBA player</h3>
+
+		<div class="row">
+			<div class="col-12">
+				<h3 class="player-header uppercase text-center">Search for you favourite NBA player</h3>
+			</div>
+			<form autocomplete="off" class="player-form">
+				<div class="player-entry autocomplete">
+					<input class ="player-entry" type="text" id="player-name" name="" placeholder="Type player here" />
+					<button type="button" id="submit" onclick="fetchPlayerInfo()"> Search </button>
 				</div>
-				<form autocomplete="off" class="player-form">
-					<div class="player-entry autocomplete">
-						<input class ="player-entry" type="text" id="player-name" name="" placeholder="Type player here" />
-						<button type="button" id="submit" onclick="fetchPlayerInfo()"> Search </button>
-					</div>
-				</form>
-			</div>
-			<div class="data row no-gutters">
-				<div class="col-12" id="loader"></div>
-				<div class="col-12 col-sm-6 d-block" id="player-image-container"></div>
-				<div class="col-12 col-sm-6 d-blockS" id="nba-user-data"></div>
-			</div>
-            <div class="gallery">
+			</form>
+		</div>
+		<div class="data row no-gutters">
+			<div class="col-12" id="loader"></div>
+			<div class="col-12 col-sm-6 d-block" id="player-image-container"></div>
+			<div class="col-12 col-sm-6 d-blockS" id="nba-user-data"></div>
+		</div>
+
+		<div class="gallery">
 
 			<img class="gallery-item" onclick="imageClick('Giannis Antetokounmpo')" src="assets/images/giannis.jpg"  alt="Giannis Antetokounmpo"/>
 			<img class="gallery-item" onclick="imageClick('Stephen Curry')" src="assets/images/steph.jpg"  alt="Steph Curry"/>
 			<img class="gallery-item" onclick="imageClick('Lebron James')" src="assets/images/lebron.jpg"  alt="Lebron James"/>
-            <img class="gallery-item d-none d-sm-inline" onclick="imageClick('Kevin Durant')" src="assets/images/kevin.jpg"  alt="Kevin Durant"/>
+			<img class="gallery-item d-none d-sm-inline" onclick="imageClick('Kevin Durant')" src="assets/images/kevin.jpg"  alt="Kevin Durant"/>
 			<img class="gallery-item" onclick="imageClick('Kawhi Leonard')" src="assets/images/kawhi.jpg"  alt="Kawhi Leonard"/>
-            <img class="gallery-item" onclick="imageClick('Damian Lillard')" src="assets/images/damian.jpg"  alt="Damian Lillard"/>
-            <img class="gallery-item" onclick="imageClick('Paul George')" src="assets/images/paul.jpg"  alt="Paul George"/>
+			<img class="gallery-item" onclick="imageClick('Damian Lillard')" src="assets/images/damian.jpg"  alt="Damian Lillard"/>
+			<img class="gallery-item" onclick="imageClick('Paul George')" src="assets/images/paul.jpg"  alt="Paul George"/>
 		</div>
-
-
 	</section>
+
+	<!-- Footer elements with icons from FontAwesome -->
 	<footer class="page-footer fixed-bottom bg-blue">
 		<div class="container">
 			<div class="row">
@@ -115,8 +117,10 @@
 	</footer>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+
 	<script type="text/javascript" src="assets/js/player-info.js"></script>
 </body>
 

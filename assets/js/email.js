@@ -1,3 +1,4 @@
+// Email send function using email.js from Interactive Frontend Development Module. 
 function sendMail(contactForm){
     emailjs.send("gmail","template_LYsBkwyA",{
         "from_name": contactForm.name.value,
@@ -8,7 +9,7 @@ function sendMail(contactForm){
         console.log("success", response);
     },
     function(error){
-        console.log("failed",error)
+        console.log("failed",error);
     });
     
 return false;

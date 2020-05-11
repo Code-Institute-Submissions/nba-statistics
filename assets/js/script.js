@@ -62,7 +62,7 @@ function getTeams(team_data) {
                     shortName: results.api.teams[i]["shortName"]
                 };
             }
-            teamsToData(team_data, team_names)
+            teamsToData(team_data, team_names);
         },
         error: function (error) {
             $("#error").removeClass("d-none");
@@ -96,7 +96,7 @@ function teamsToData(team_data, team_names) {
 function writeToDocument(teams) {
     var el = document.getElementById("teams");
     el.innerHTML = "";
-    ranking = 1
+    ranking = 1;
     teamsEast = {};
     teamsWest = {};
     tableContentWest = [];
@@ -111,7 +111,7 @@ function writeToDocument(teams) {
         }
     }
     // Logo for Detroit not loading as 404 - link in manually
-    teamsEast[13]["logo"] = "https://sportslogohistory.com/wp-content/uploads/2017/05/detroit_pistons_2017-pres.png"
+    teamsEast[13]["logo"] = "https://sportslogohistory.com/wp-content/uploads/2017/05/detroit_pistons_2017-pres.png";
 
     for (var i in teamsEast) {
         tableContentEast.push(
@@ -126,7 +126,7 @@ function writeToDocument(teams) {
             <td class="d-none d-sm-table-cell">${teamsEast[i]["homeWin"]} - ${teamsEast[i]["homeLoss"]}</td>
             <td class="d-none d-sm-table-cell">${teamsEast[i]["awayWin"]} - ${teamsEast[i]["awayLoss"]}</td>
              </tr>`
-        )
+        );
     }
     for (var i in teamsWest) {
         tableContentWest.push(
@@ -141,7 +141,7 @@ function writeToDocument(teams) {
             <td class="d-none d-sm-table-cell">${teamsWest[i]["homeWin"]} - ${teamsEast[i]["homeLoss"]}</td>
             <td class="d-none d-sm-table-cell">${teamsWest[i]["awayWin"]} - ${teamsEast[i]["awayLoss"]}</td>
              </tr>`
-        )
+        );
     }
     
     

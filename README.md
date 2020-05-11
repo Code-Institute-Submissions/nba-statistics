@@ -7,14 +7,14 @@ from the latest games to be played. They will also have the ability to contact t
 and contacting the service with specific feedback or requests. The value to the provider will be increased traffic and outreach to fans and potential fans,
 , direct feedback and usable data on players favoured by users and an interactive site that is engaging to the user. 
 
-##UX
-..The users for this website can be split into three main groups. The first are general type users who are already fans of basketball or the NBA in general and will likely be looking for specific
+## UX
+.. The users for this website can be split into three main groups. The first are general type users who are already fans of basketball or the NBA in general and will likely be looking for specific
 information and have come to the site with a specific purpose. These users are likely the ones who will recieve the most engagement. The second group of users are organisational users connected to
 the league and its subsidieres itself, be that the NBA organisation or specific franchises within the league. This would be the group that stands to benefit through engagement with 
 their customer base. The third group are more general type users that do not fit into either category, who are not necessarily basketball fans and perhaps happened across the site by accident or were 
 recommended it by a friend. This group will likely be less engage but are the ones who are set to learn the most from the site as all information may be things they haven't seen before. 
 
-###User Stories
+### User Stories
 * As an NBA Fan, I want to keep up to date with current players statistics and leage standings by visiting a site regularly that has this information as the season progresses.
 * As a basketball fan, I want a convenient place to see stories and video from a variety of mainstream media outlets, by visiting a site that has all of them in one place.
 * As an NBA player/ franchise, I want to grow my following of fans and supporters to increase my own popularity and the popularity of the game of basketball. 
@@ -30,12 +30,12 @@ will be API requests (only 1000 per day) meaning that attempts will need to be m
 website upgrading to a paid service may be necessary. 
 
 ### UX Surface
-The site will mainly use the font family 'Exo' for styling of all text. Navbar header and footer elements will be sticky (top and bottom) and on the larger pages will assist navigation through 
+.. The site will mainly use the font family 'Exo' for styling of all text. Navbar header and footer elements will be sticky (top and bottom) and on the larger pages will assist navigation through 
 interactivity. A blue background will be used for both following/as near to as possible the NBA logo color scheme. Social links will use FontAwesome icons in footer elements.
 The site will be viewable on all screen sizes with a mobile first approach to responsiveness. Differences between screen layouts have been detailed in wireframes however as it is likely 
 tablet and desktop view will be the same wireframes have been included for mobile and desktop view only. See attached file in assets/wireframes for details.
 
-##Features
+## Features
 * Conference Standing section - this section uses the rapidAPI NBA API to provide up to date information on the standings for the season of each team in the Eastern and Western Conference.
 * Video Section - section shows videos that boost engagement and shows interesting news from around the NBA. Weekly updates would be plays of the week from that week when the season is back on.
 * News Section - with links to relevant news stories this section is interactive allowing users to show more content from the stories that interest them before following the link.
@@ -44,7 +44,7 @@ tablet and desktop view will be the same wireframes have been included for mobil
 * Image player search - For users not familiar with the NBA and its player a series of images are displayed on the page which when clicked show the stats for the star in the picture.
 * Contact form - a contact form for users to email the site to request players they want information on. This could be past NBA stars not currently in the league. 
 
-###Existing Features
+### Existing Features
 
 1. Conference Standing Section - allows NBA fans to see how their team is doing in the competition by visualising the results of the whole season with number of wins and losses and their team ranking by conference. 
 
@@ -66,7 +66,7 @@ tablet and desktop view will be the same wireframes have been included for mobil
 	- implemented using the email.js script
 
 
-###Features Left to Implement
+### Features Left to Implement
 * A team rosters and info section. 
 * Adding team information and more general information to the player search (i.e teams player plays for, physical attributes, etc) - not currently attached as information not available for all players searchable.
 * Increasing the quantity of news articles and video content available.
@@ -75,7 +75,7 @@ tablet and desktop view will be the same wireframes have been included for mobil
 * Adding in a listener for players called to give data on number of searches for each player to see which are favoured by fans. 
 * Adding a Youtube search function to player search to show player highlights videos from search.
 
-##Technologies Used
+## Technologies Used
 
 * JQuery and Ajax
 The project uses JQuery to simplify DOM manipulation and Ajax to make API requests with success and error function. 
@@ -101,7 +101,7 @@ https://www.emailjs.com/
 Used to insert more aesthetically pleasing fonts to the CSS
 https://fonts.googleapis.com/
 
-##Testing
+## Testing
 
 ### Conference standings
 * Go to "Home" page.
@@ -137,31 +137,31 @@ https://fonts.googleapis.com/
 * Mouse over images and verify the toggling of the highlight class to show they are clickable.
 * Try to click the first image of "Giannis Antetokounmpo" and verified data and headshot image loaded correctly, with loader gif correctly showing before. 
 
-###Contact form:
+### Contact form:
 * Go to the "Contact Us" page
 * Try to submit the empty form and verify that an error message about the required fields appears
 * Try to submit the form with an invalid email address and verify that a relevant error message appears
 * Try to submit the form with all inputs valid and verify that a success message appears.
 * Checked email response coming through from email.js to personal email in correct form.
 
-###Responsive Design
-..The project was designed with a mobile first approach and aims to be aesthetically pleasing and well ordered on all screen sizes. Generally there is not much 
+### Responsive Design
+.. The project was designed with a mobile first approach and aims to be aesthetically pleasing and well ordered on all screen sizes. Generally there is not much 
 difference between desktop and tablet screen sizes as during development content seemed to work for both, with the only major difference being the font size at the larger screen size.
 
-..For the home page on mobile versions the standings table is slightly thinner, with the shortened team name used and with several collumns including home and away wins and losses, 
+.. For the home page on mobile versions the standings table is slightly thinner, with the shortened team name used and with several collumns including home and away wins and losses, 
 and the team logo removed to fit the screen size. Videos are then displayed with vertical flow, instead of horizontally instead of the horizontal format used on tablet and desktop view. News 
 articles similarly have a top down flow at the smaller size with image and text on top of each other. Navbar elements are condensed into a burger dropdown 
 to reduce the space they take up on mobile view and then are evenly spaced on tablet and desktop with a slight margin between the logo and nav elements. Nav elements within the home page use a dropdown function.
 
-..On the player page using mobile screen size the largest player image is not displayed and the rest use a 2 collumn approach with smaller image sizes. The player data
+.. On the player page using mobile screen size the largest player image is not displayed and the rest use a 2 collumn approach with smaller image sizes. The player data
 is loaded in image on top and data below, compared to side by side on tablet and desktop. The space reserved for the data is also larger on tablet and desktop. Similarly the 
 Nav elements use the consistent approach of being condensed to a burger dropdown on mobile resolution. 
 
-..Finally on the contact page, header elements have a smaller width on mobile sizes compared to other sizes with more of the text being wrapped.
+.. Finally on the contact page, header elements have a smaller width on mobile sizes compared to other sizes with more of the text being wrapped.
 Once again for consistence the Navbar uses the previously detailed approach.
 
-###Bugs 
-..Here is detailed several of the bugs discovered through testing and developments:
+### Bugs 
+.. Here is detailed several of the bugs discovered through testing and developments:
 
 * Maxing out API requests on retrieving standings 
 .. Very early on in development the API request used XMLHTTPRequest, however as the code developed and the standing data needed to be ordered by ranking
@@ -189,22 +189,21 @@ at the start of each new search.
 from the API which was different than total wins and loses. 
 
 
-##Deployment
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
+## Deployment
 .. The project was created using Gitpod for Github. Initially the main page was created in conjunction with the script.js file to provide functionality
-and interactivity. The style was formated using style.css 
+and interactivity. The style was formated using style.css. The second page, player.html was then created in conjunction with the player-info.js file 
+to give functionality to the player search feature with the contact page being created last. The project was then deployed on the Github site.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
 
-Th website can be initiated using the command 'python3 -m http.server
+## Credits
 
-##Credits
-###Content
-*The text for News section was copied from the New York Times website https://www.nytimes.com/
-*The data for conference standings and player data was implemented using RapidAPI's NBA API found here https://rapidapi.com/api-sports/api/api-nba
-##Media
-The photos used in this site were obtained from https://espn.co.uk, https://wallpapersafari.com/, https://clutchpoints.com/, https://dailymail.co.uk, https://www.wsj.com/ and 
-##Acknowledgements
-*I received inspiration for this project from Tom Smith and assistance with his personal user story. 
-*I would like to thank Rhey Magcalas for her help and support.
+### Content
+
+* The text for News section was copied from the New York Times website https://www.nytimes.com/
+* The data for conference standings and player data was implemented using RapidAPI's NBA API found here https://rapidapi.com/api-sports/api/api-nba
+
+## Media
+* The photos used in this site were obtained from https://espn.co.uk, https://wallpapersafari.com/, https://clutchpoints.com/, https://dailymail.co.uk, https://www.wsj.com/ and https://dribbble.com/shots/3822565-Loading for loader gif by Cody Pearson.
+## Acknowledgements
+* I received inspiration for this project from Tom Smith and assistance with his personal user story. 
+* I would like to thank Rhey Magcalas for her help and support.
