@@ -192,7 +192,8 @@ from the API which was different than total wins and loses.
 ## Deployment
 .. The project was created using Gitpod for Github. Initially the main page was created in conjunction with the script.js file to provide functionality
 and interactivity. The style was formated using style.css. The second page, player.html was then created in conjunction with the player-info.js file 
-to give functionality to the player search feature with the contact page being created last. The project was then deployed on the Github site.
+to give functionality to the player search feature with the contact page being created last. The project was then deployed on the Github site by going to settings and Github pages.
+While there were several differences between the concept design in the wireframes, there are no major differences between the developmental and deployed version. 
 
 
 ## Credits
